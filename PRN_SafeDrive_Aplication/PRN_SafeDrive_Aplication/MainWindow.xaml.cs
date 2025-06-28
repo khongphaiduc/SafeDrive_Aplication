@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using PRN_SafeDrive_Aplication.Models;
+using PRN_SafeDrive_Aplication.Test;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,8 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using PRN_SafeDrive_Aplication.Models;
-using PRN_SafeDrive_Aplication.Test;
+
 namespace PRN_SafeDrive_Aplication
 {
     /// <summary>
@@ -24,9 +25,9 @@ namespace PRN_SafeDrive_Aplication
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SafeDriveApplicationContext o = new SafeDriveApplicationContext();
+          Prn1Context prn1Context = new Prn1Context();
 
-            if (o.Users.Count() != 0)
+            if (prn1Context.Users.Count() != 0)
             {
                 int a = 0;
                 while (a < 50)

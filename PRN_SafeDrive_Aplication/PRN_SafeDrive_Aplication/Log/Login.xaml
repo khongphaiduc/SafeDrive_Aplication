@@ -131,7 +131,7 @@
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,14">
                     <Button Content="Quên mật khẩu?" Background="Transparent" Foreground="#1966d2"
-                            BorderThickness="0" FontSize="16" Cursor="Hand"/>
+                            BorderThickness="0" FontSize="16" Cursor="Hand" Click="Button_Click_2"/>
                 </StackPanel>
 
                 <Button Content="Đăng nhập" Style="{StaticResource RoundedButtonStyle}" Margin="0,12,0,16" Click="Button_Click"/>
@@ -146,7 +146,7 @@
                             Cursor="Hand"
                             Padding="8,0"
                             Margin="10,0,0,0"
-                            VerticalAlignment="Center"/>
+                            VerticalAlignment="Center" Click="Button_Click_1"/>
                 </StackPanel>
             </StackPanel>
         </Border>

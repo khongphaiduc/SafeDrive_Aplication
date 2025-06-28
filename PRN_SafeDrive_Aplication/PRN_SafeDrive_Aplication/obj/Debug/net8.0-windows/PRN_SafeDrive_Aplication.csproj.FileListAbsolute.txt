@@ -128,3 +128,7 @@ E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\obj\De
 E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\obj\Debug\net8.0-windows\Test\TestProject.baml
 E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\obj\Debug\net8.0-windows\Log\Login.g.cs
 E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\obj\Debug\net8.0-windows\Log\Login.baml
+E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\obj\Debug\net8.0-windows\Log\RegisterAccount.baml
+E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\obj\Debug\net8.0-windows\Log\RegisterAccount.g.cs
+E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\obj\Debug\net8.0-windows\Log\ForgetPassword.baml
+E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\obj\Debug\net8.0-windows\Log\ForgetPassword.g.cs
