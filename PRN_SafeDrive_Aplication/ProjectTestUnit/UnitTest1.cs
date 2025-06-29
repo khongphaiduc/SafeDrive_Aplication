@@ -12,7 +12,7 @@ namespace ProjectTestUnit
 
             // Arrange
 
-            var register = new Register();
+            var register = new Registers();
 
             // Act
 
@@ -33,7 +33,7 @@ namespace ProjectTestUnit
         public void Register_ShouldReturnTrue_WhenValid(string username, string password, string salt, string email, string role, bool expected)
         {
             // Arrange
-            var register = new Register();
+            var register = new Registers();
 
             // Act
             bool result = register.Register(username, password, salt, email, role);
@@ -51,7 +51,7 @@ namespace ProjectTestUnit
         public void Test2(string account, bool expected)
         {
             // Arrange
-            var register = new Register();
+            var register = new Registers();
             // Act
             bool result = register.IsUsernameAvailable(account);
             // Assert
