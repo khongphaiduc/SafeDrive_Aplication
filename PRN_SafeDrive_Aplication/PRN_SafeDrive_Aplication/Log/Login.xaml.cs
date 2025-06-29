@@ -1,4 +1,5 @@
 ﻿using PRN_SafeDrive_Aplication.BiLL;
+using PRN_SafeDrive_Aplication.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,14 +32,18 @@ namespace PRN_SafeDrive_Aplication.Log
         {
             string account = UsernameBox.Text;
 
-            string password  = PasswordBox.Password;
-           
-            
-            bool  result = UserLog.LoginUser(account, password);
+            string password = PasswordBox.Password;
+
+
+            bool result = UserLog.LoginUser(account, password);
 
             if (result)
-            {            
-               Home home = new Home();
+            {
+                Home home = new Home();
+
+
+                SessionUser.Email = account; // Lưu email vào SessionUser
+
                 home.Show();
                 this.Close();
             }

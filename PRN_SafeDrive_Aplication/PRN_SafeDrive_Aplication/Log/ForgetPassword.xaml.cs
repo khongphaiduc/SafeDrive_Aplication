@@ -42,11 +42,11 @@ namespace PRN_SafeDrive_Aplication.Log
                 }
                 else
                 {
-                    ResetPassword  t = new ResetPassword();
+                    ResetPassword t = new ResetPassword();
 
-                   string password =  t.ResetPasswords(emailUser); // reset mật khẩu của thằng user
+                    string password = t.ResetPasswords(emailUser); // reset mật khẩu của thằng user
 
-                    await MyResendEmail.SendGmailAsync(emailUser, "New Password", "Mật Khẩu Mới Của bạn là :"+password +"\n " +"Vui lòng đăng nhập và thay đổi lại mật khẩu ");
+                    await MyResendEmail.SendGmailAsync(emailUser, "New Password", "Mật Khẩu Mới Của bạn là :" + password + "\n " + "Vui lòng đăng nhập và thay đổi lại mật khẩu ");
                 }
 
             }

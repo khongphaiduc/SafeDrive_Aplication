@@ -84,7 +84,7 @@ namespace PRN_SafeDrive_Aplication.Log {
             case 2:
             
             #line 77 "..\..\..\..\Log\ForgetPassword.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Confirm_ClickAsync);
+            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Confirm_Click);
             
             #line default
             #line hidden

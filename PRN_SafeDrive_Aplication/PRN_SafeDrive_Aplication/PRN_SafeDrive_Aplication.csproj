@@ -10,6 +10,10 @@
 
   <ItemGroup>
     <None Remove="image\3850253_image001.jpg" />
+    <None Remove="image\anh1.png" />
+    <None Remove="image\imageTraffic.jpg" />
+    <None Remove="Log\anh1.png" />
+    <None Remove="Log\imageLogin.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +33,12 @@
     <Resource Include="image\3850253_image001.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="image\anh1.png" />
+    <Resource Include="image\imageTraffic.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Log\anh1.png" />
+    <Resource Include="Log\imageLogin.png" />
   </ItemGroup>
 
 </Project>
