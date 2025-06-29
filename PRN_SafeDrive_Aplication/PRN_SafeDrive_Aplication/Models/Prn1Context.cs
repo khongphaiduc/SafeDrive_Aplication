@@ -35,10 +35,9 @@ public partial class Prn1Context : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=14.225.220.135;Database=PRN1;User Id=sa;Password=10112004;TrustServerCertificate=True;");
+        optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("URL_SQL_SafeDrive"));
 
     }
-
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
