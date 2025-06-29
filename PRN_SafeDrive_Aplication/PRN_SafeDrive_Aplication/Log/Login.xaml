@@ -134,7 +134,7 @@
                             BorderThickness="0" FontSize="16" Cursor="Hand" Click="Button_Click_2"/>
                 </StackPanel>
 
-                <Button Content="Đăng nhập" Style="{StaticResource RoundedButtonStyle}" Margin="0,12,0,16" Click="Button_Click"/>
+                <Button Content="Đăng nhập" Style="{StaticResource RoundedButtonStyle}" Margin="0,12,0,16" Click="Button_Click" IsDefault="True"/>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,18,0,0">
                     <TextBlock Text="Chưa có tài khoản?" FontSize="16" Foreground="#5b6b89" VerticalAlignment="Center"/>

@@ -40,9 +40,9 @@
                 <!-- Vai trò -->
                 <TextBlock Text="Vai trò" FontWeight="SemiBold" />
                 <ComboBox x:Name="cbRole" Margin="0,5,0,15" Padding="6">
-                    <ComboBoxItem Content="Học viên" IsSelected="True"/>
-                    <ComboBoxItem Content="Giáo Viên"/>
-                    <ComboBoxItem Content="Người quản lý"/>
+                    <ComboBoxItem Content="Student" IsSelected="True"/>
+                    <ComboBoxItem Content="Teacher"/>
+                    <ComboBoxItem Content="TrafficPolice"/>
                 </ComboBox>
 
                 <!-- Nút đăng ký -->

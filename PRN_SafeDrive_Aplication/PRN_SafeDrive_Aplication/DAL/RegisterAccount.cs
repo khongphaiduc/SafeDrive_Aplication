@@ -6,36 +6,41 @@ namespace PRN_SafeDrive_Aplication.DAL
 {
     public class RegisterAccount
     {
-        public Prn1Context dbcontext  = new Prn1Context();
+        public Prn1Context dbcontext = new Prn1Context();
         // đăng ký tài khoảng mới 
-        public bool Register(string username, string password, string salt ,string email, string role)
+        public bool Register(string username, string password, string salt, string email, string role)
         {
-            var listUser = dbcontext.Users.ToList();
-
-            dbcontext.Users.Add(new User
+            try
             {
-                FullName = username,
-                Password = password,
-                Salt = salt,
-                Email = email,
-                Role = role
-            });
+                var listUser = dbcontext.Users.ToList();
 
-            int row = dbcontext.SaveChanges();
+                dbcontext.Users.Add(new User
+                {
+                    FullName = username,
+                    Password = password,
+                    Salt = salt,
+                    Email = email,
+                    Role = role
+                });
 
-            return row != 0 ? true : false;
+                int row = dbcontext.SaveChanges();
+
+                return row != 0 ? true : false;
+            }
+            catch (Exception s)
+            {
+                Console.WriteLine("Bug at RegisterAccount with content :"+s.Message);
+               
+            }
+            return false;
         }
 
 
-        // kiểm tra xem tên đăng nhập đã có người sử dụng hay chưa
+        // kiểm tra xem tên đăng nhập đã tồn tại hay chưa 
         public bool IsUsernameAvailable(string email)
         {
-            return dbcontext.Users.Any(s => s.FullName == email);
+            return dbcontext.Users.Any(s => s.Email == email);
         }
-
-
-
-
 
 
 

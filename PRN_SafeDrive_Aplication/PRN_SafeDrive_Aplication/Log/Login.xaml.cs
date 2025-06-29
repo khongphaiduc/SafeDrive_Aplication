@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PRN_SafeDrive_Aplication.BiLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,23 @@ namespace PRN_SafeDrive_Aplication.Log
         // đăng nhập
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string account = UsernameBox.Text;
 
+            string password  = PasswordBox.Password;
+           
+            
+            bool  result = UserLog.LoginUser(account, password);
+
+            if (result)
+            {            
+               Home home = new Home();
+                home.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

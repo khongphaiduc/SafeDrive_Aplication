@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PRN_SafeDrive_Aplication.BiLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,9 +32,33 @@ namespace PRN_SafeDrive_Aplication.Log
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
 
+
+            string username = txtFullName.Text;
+
+            string password = txtPassword.Password;
+            string confirmPassword = txtConfirmPassword.Password;
+            if (!password.Equals(confirmPassword))
+            {
+                MessageBox.Show("Mật Khẩu Không Khớp ");
+                return;
+            }
+            string email = txtEmail.Text;
+            ComboBoxItem selectedItem = (ComboBoxItem)cbRole.SelectedItem;
+            string role = selectedItem.Content.ToString();
+
+            bool result = UserLog.RegisterUser(username, password, email, role);
+
+            if (result)
+            {
+                MessageBox.Show("Đăng Ký Thành Công");
+            }
+            else
+            {
+                MessageBox.Show("Tên đăng nhập đã tồn tại hoặc có lỗi xảy ra. Vui lòng thử lại.");
+            }
         }
 
-       
+
 
         private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
