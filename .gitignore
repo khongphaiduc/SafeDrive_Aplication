@@ -1,0 +1,104 @@
+# Ignore Visual Studio temporary files, build results, and
+# user-specific files
+.vs/
+.vscode/
+*.code-workspace
+*.user
+*.suo
+*.sln.docstates
+*.cache
+*.dbmdl
+*.bak
+*.log
+*.tmp
+
+# Ignore build results
+bin/
+obj/
+[Bb]uild/
+[Ll]ogs/
+out/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.rsuser
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code settings
+.history/
+*.history/
+
+# Npm packages (if using Blazor or frontend)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Sonar
+.sonar/
+sonar-report.json
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+*.nuspec
+.nuget/
+packages/
+*.symbols.nupkg
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# DotCover
+.idea.DotSettings
+*.dotCover
+
+# Local history for JetBrains tools
+.idea/.idea/
+
+# Tye
+.tye/
+
+# dotnet watch working directory
+**/obj/**/.dotnet-watch.json
+
+# Docker
+docker-compose.override.yml
+docker-compose.override.*.yml
+
+# Coverage reports
+coverage/
+lcov.info
+*.lcov
+
+# Publish output
+publish/
+*.publish.xml
+app.publish/
