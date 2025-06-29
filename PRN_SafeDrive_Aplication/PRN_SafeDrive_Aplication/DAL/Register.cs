@@ -4,7 +4,7 @@ using PRN_SafeDrive_Aplication.Models;
 
 namespace PRN_SafeDrive_Aplication.DAL
 {
-    public class RegisterAccount
+    public class Registers
     {
         public Prn1Context dbcontext = new Prn1Context();
         // đăng ký tài khoảng mới 
@@ -29,7 +29,7 @@ namespace PRN_SafeDrive_Aplication.DAL
             }
             catch (Exception s)
             {
-                Console.WriteLine("Bug at RegisterAccount with content :"+s.Message);
+                Console.WriteLine("Bug at Register with content :"+s.Message);
                
             }
             return false;

@@ -14,7 +14,7 @@ namespace PRN_SafeDrive_Aplication.BiLL
         public static bool LoginUser(string email, string password)
         {
 
-            RegisterAccount register = new RegisterAccount();
+            Registers register = new Registers();
 
             if (!register.IsUsernameAvailable(email)) return false;  // kiểm tra xem tên đăng nhập đã tồn tại hay chưa
 
@@ -32,7 +32,7 @@ namespace PRN_SafeDrive_Aplication.BiLL
             else
             {
                 return false; 
-            }
+            }   
 
         }
 
@@ -40,7 +40,7 @@ namespace PRN_SafeDrive_Aplication.BiLL
         // đăng ký 
         public static bool RegisterUser(string username, string password, string email, string role)
         {
-            RegisterAccount register = new RegisterAccount();
+            Registers register = new Registers();
             if (register.IsUsernameAvailable(email)) return false;  // kiểm tra xem tên đăng nhập đã tồn tại hay chưa
             string salt = HashingPasswork.GenerateSalt();  // tạo salt mới
             string hashedPassword = HashingPasswork.HashPassword(password, salt);  // băm mật khẩu với salt
