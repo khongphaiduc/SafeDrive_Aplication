@@ -27,6 +27,9 @@ namespace PRN_SafeDrive_Aplication.BiLL
         }
 
 
+
+
+
         // Băm mật khẩu với salt
         public static string HashPassword(string password, string salt)
         {
@@ -38,11 +41,6 @@ namespace PRN_SafeDrive_Aplication.BiLL
             }
         }
 
-        public static bool VerifyPassword(string enteredPassword, string storedHash, string storedSalt)
-        {
-            string hashOfInput = HashPassword(enteredPassword, storedSalt);
-            return hashOfInput == storedHash;
-        }
 
 
         // lấy salt từ email

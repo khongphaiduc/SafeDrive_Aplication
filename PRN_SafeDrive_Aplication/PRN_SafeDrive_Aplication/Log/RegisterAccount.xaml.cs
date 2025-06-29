@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace PRN_SafeDrive_Aplication.Log
 {
     /// <summary>
-    /// Interaction logic for RegisterAccount.xaml
+    /// Interaction logic for Register.xaml
     /// </summary>
     public partial class RegisterAccount : Window
     {
@@ -51,6 +51,9 @@ namespace PRN_SafeDrive_Aplication.Log
             if (result)
             {
                 MessageBox.Show("Đăng Ký Thành Công");
+
+                this.Close();
+
             }
             else
             {
