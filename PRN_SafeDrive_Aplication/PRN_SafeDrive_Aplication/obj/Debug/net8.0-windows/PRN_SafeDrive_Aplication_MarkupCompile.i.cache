@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\obj\Debug\net8.0-windows\
+D:\Project_PRN\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\obj\Debug\net8.0-windows\
 PRN_SafeDrive_Aplication
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\App.xaml
-5-1945522515
+D:\Project_PRN\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\App.xaml
+61064852890
 
-22-1023025421
-227-177890947
-Log\ForgetPassword.xaml;Log\Login.xaml;Log\RegisterAccount.xaml;MainWindow.xaml;Test\TestProject.xaml;
+23-1909550531
+227-1057656158
+Log\ForgetPassword.xaml;Log\Login.xaml;Log\RegisterAccount.xaml;MainWindow.xaml;Student\StudentWindow.xaml;Test\TestProject.xaml;
 
-False
+True
 
