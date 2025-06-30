@@ -1,0 +1,143 @@
+﻿<Window x:Class="PRN_SafeDrive_Aplication.BiLL.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SafeDrive Dashboard" Height="804" Width="1581" Background="#f4f6f9"
+        WindowStartupLocation="CenterScreen">
+
+
+
+    <Window.Resources>
+
+
+
+        <!-- Style cho các card chức năng -->
+        <Style x:Key="CardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Gray" BlurRadius="10" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style cho nút chức năng -->
+        <Style x:Key="ModernButton" TargetType="Button">
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Background" Value="#3498db"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <!-- Không dùng CornerRadius ở đây -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <!-- Border với CornerRadius nằm trong đây -->
+                        <Border Background="{TemplateBinding Background}" CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#2980b9"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Sidebar -->
+        <StackPanel Background="#2c3e50" Orientation="Vertical" Grid.Column="0">
+            <TextBlock Text="🚗 SafeDrive" FontSize="22" Foreground="White" FontWeight="Bold" Margin="20"/>
+            <Button Content="🏠 Trang chủ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="👤 Hồ sơ cá nhân" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="📚 Khóa học" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="📝 Kỳ thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="📊 Thống kê" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="⚙️ Cài đặt" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+        </StackPanel>
+
+        <!-- Nội dung chính -->
+        <ScrollViewer Padding="20" Grid.Column="1" Height="778" VerticalAlignment="Center" HorizontalAlignment="Right" Width="1381">
+
+            <ScrollViewer.Background>
+                <ImageBrush TileMode="Tile" ImageSource="/image/imageTraffic.jpg"/>
+            </ScrollViewer.Background>
+
+            <WrapPanel Orientation="Horizontal" ItemWidth="300" ItemHeight="Auto">
+
+                <!-- Card: Học sinh -->
+                <Border Style="{StaticResource CardStyle}" Width="290">
+                    <StackPanel>
+                        <TextBlock Text="👨‍🎓 Học sinh" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <Button Content="Cập nhật thông tin" Style="{StaticResource ModernButton}"/>
+                        <Button Content="Đăng ký khóa học" Style="{StaticResource ModernButton}"/>
+                        <Button Content="Theo dõi kết quả" Style="{StaticResource ModernButton}"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Card: Giảng viên -->
+                <Border Style="{StaticResource CardStyle}" Width="290">
+                    <StackPanel>
+                        <TextBlock Text="👩‍🏫 Giảng viên" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <Button Content="Tạo khóa học" Style="{StaticResource ModernButton}"/>
+                        <Button Content="Quản lý học sinh" Style="{StaticResource ModernButton}"/>
+                        <Button Content="Chấm điểm  đánh giá" Style="{StaticResource ModernButton}"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Card: Cảnh sát giao thông -->
+                <Border Style="{StaticResource CardStyle}" Width="290">
+                    <StackPanel>
+                        <TextBlock Text="🚓 Cảnh sát Giao thông" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <Button Content="Phê duyệt kỳ thi" Style="{StaticResource ModernButton}"/>
+                        <Button Content="Quản lý chứng chỉ" Style="{StaticResource ModernButton}"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Card: Thông báo -->
+                <Border Style="{StaticResource CardStyle}" Width="290">
+                    <StackPanel>
+                        <TextBlock Text="🔔 Thông báo  Giao tiếp" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <Button Content="Lịch học, thi" Style="{StaticResource ModernButton}"/>
+                        <Button Content="Kết quả thi" Style="{StaticResource ModernButton}"/>
+                        <Button Content="Trao đổi nội bộ" Style="{StaticResource ModernButton}"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Card: Báo cáo -->
+                <Border Style="{StaticResource CardStyle}" Width="290">
+                    <StackPanel>
+                        <TextBlock Text="📈 Báo cáo  Thống kê" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <Button Content="Số lượng học viên" Style="{StaticResource ModernButton}"/>
+                        <Button Content="Tỷ lệ đạt chứng chỉ" Style="{StaticResource ModernButton}"/>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource CardStyle}" Width="290">
+                    <StackPanel>
+                        <TextBlock Text="💳 Thanh toán" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <Button Content="Lịch sử giao dịch" Style="{StaticResource ModernButton}"/>
+                        <Button Content="Thanh toán học phí" Style="{StaticResource ModernButton}"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Card: Học phí -->
+
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

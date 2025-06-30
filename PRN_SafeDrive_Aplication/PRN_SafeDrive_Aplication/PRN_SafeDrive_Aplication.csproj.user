@@ -2,6 +2,9 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="Home\Home.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Log\ForgetPassword.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

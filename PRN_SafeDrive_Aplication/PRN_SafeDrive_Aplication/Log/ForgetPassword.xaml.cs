@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PRN_SafeDrive_Aplication.DAL;
+using PRN_SafeDrive_Aplication.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace PRN_SafeDrive_Aplication.Log
 {
-    /// <summary>
-    /// Interaction logic for ForgetPassword.xaml
-    /// </summary>
     public partial class ForgetPassword : Window
     {
         public ForgetPassword()
@@ -24,9 +23,33 @@ namespace PRN_SafeDrive_Aplication.Log
             InitializeComponent();
         }
 
-        private void Confirm_Click(object sender, RoutedEventArgs e)
+        private async void Confirm_Click(object sender, RoutedEventArgs e)
         {
+            string emailUser = txtEmail.Text;
+            if (string.IsNullOrEmpty(emailUser))
+            {
+                MessageBox.Show("Vui lòng nhập email của bạn.");
+                return;
+            }
+            else
+            {
 
+                Registers s = new Registers();
+                if (!s.IsUsernameAvailable(emailUser))
+                {
+                    MessageBox.Show("Email không tồn tại ");
+                    return;
+                }
+                else
+                {
+                    ResetPassword t = new ResetPassword();
+
+                    string password = t.ResetPasswords(emailUser); // reset mật khẩu của thằng user
+
+                    await MyResendEmail.SendGmailAsync(emailUser, "New Password", "Mật Khẩu Mới Của bạn là :" + password + "\n " + "Vui lòng đăng nhập và thay đổi lại mật khẩu ");
+                }
+
+            }
         }
     }
 }

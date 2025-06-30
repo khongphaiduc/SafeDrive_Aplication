@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using PRN_SafeDrive_Aplication.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -12,6 +14,7 @@ namespace PRN_SafeDrive_Aplication.BLL
     public class HashingPasswork
     {
 
+
         // tạo salt
         public static string GenerateSalt()
         {
@@ -22,6 +25,9 @@ namespace PRN_SafeDrive_Aplication.BLL
             }
             return Convert.ToBase64String(saltBytes);
         }
+
+
+
 
 
         // Băm mật khẩu với salt
@@ -35,11 +41,30 @@ namespace PRN_SafeDrive_Aplication.BLL
             }
         }
 
-        public static bool VerifyPassword(string enteredPassword, string storedHash, string storedSalt)
+
+
+        // lấy salt từ email
+        public static string getSalt(string email)
         {
-            string hashOfInput = HashPassword(enteredPassword, storedSalt);
-            return hashOfInput == storedHash;
+            Prn1Context mydbcontext = new Prn1Context();
+            return mydbcontext.Users
+                .Where(s => s.Email.Equals(email))
+                .Select(s => s.Salt)
+                .FirstOrDefault() ?? string.Empty;
+
         }
+
+
+        // lấy mật khẩu từ email
+        public static string getPasswordHashing(string email)
+        {
+            Prn1Context mydbcontext = new Prn1Context();
+            return mydbcontext.Users
+                .Where(s => s.Email.Equals(email))
+                .Select(s => s.Password)
+                .FirstOrDefault() ?? string.Empty;
+        }
+
 
 
     }

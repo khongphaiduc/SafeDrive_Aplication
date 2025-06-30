@@ -96,17 +96,10 @@
         </Grid.ColumnDefinitions>
 
         <!-- Bên trái: Logo và Slogan -->
-        <StackPanel Grid.Column="0" Background="#1966d2" RenderTransformOrigin="0.499,0.597">
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,60,0,0">
-                <TextBlock Text="SafeDrive Academy" FontSize="36" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
-
-                <!-- Bo góc ảnh -->
-                <Border Width="216" Height="140" CornerRadius="50" ClipToBounds="True">
-                    <Image x:Name="logo" Source="pack://application:,,,/image/3850253_image001.jpg" Width="216" Height="140" RenderTransformOrigin="0.5,0.5" Stretch="UniformToFill" StretchDirection="DownOnly"/>
-                </Border>
-
-                <TextBlock Text="Học và Thi bằng lái xe uy tín" FontSize="20" Foreground="#d4e6fa" Margin="0,12,0,0" HorizontalAlignment="Center"/>
-            </StackPanel>
+        <StackPanel Grid.Column="0" RenderTransformOrigin="0.499,0.597">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/Log/imageLogin.png"/>
+            </StackPanel.Background>
         </StackPanel>
 
 
@@ -134,7 +127,7 @@
                             BorderThickness="0" FontSize="16" Cursor="Hand" Click="Button_Click_2"/>
                 </StackPanel>
 
-                <Button Content="Đăng nhập" Style="{StaticResource RoundedButtonStyle}" Margin="0,12,0,16" Click="Button_Click"/>
+                <Button Content="Đăng nhập" Style="{StaticResource RoundedButtonStyle}" Margin="0,12,0,16" Click="Button_Click" IsDefault="True"/>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,18,0,0">
                     <TextBlock Text="Chưa có tài khoản?" FontSize="16" Foreground="#5b6b89" VerticalAlignment="Center"/>

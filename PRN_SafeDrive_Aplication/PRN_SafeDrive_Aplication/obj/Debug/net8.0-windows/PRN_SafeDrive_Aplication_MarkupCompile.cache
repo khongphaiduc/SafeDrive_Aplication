@@ -9,12 +9,21 @@ PRN_SafeDrive_Aplication
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+<<<<<<< HEAD
 D:\Project_PRN\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\App.xaml
 61064852890
 
 21-655331318
 227-1057656158
 Log\ForgetPassword.xaml;Log\Login.xaml;Log\RegisterAccount.xaml;MainWindow.xaml;Student\StudentWindow.xaml;Test\TestProject.xaml;
+=======
+E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\App.xaml
+6373809582
+
+251392861609
+227-177890947
+Home\Home.xaml;Log\ForgetPassword.xaml;Log\Login.xaml;Log\RegisterAccount.xaml;MainWindow.xaml;Test\TestProject.xaml;
+>>>>>>> 2b6070090ef490943ec845f11ebe3e47699c4407
 
 False
 
