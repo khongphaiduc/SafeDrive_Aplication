@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PRN_SafeDrive_Aplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5de24d0ca8f7698b585f104186e511c286ac1fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa49aa9b88480bdd2bd4c501cf6d7d8663a26b5c")]
 [assembly: System.Reflection.AssemblyProductAttribute("PRN_SafeDrive_Aplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PRN_SafeDrive_Aplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
