@@ -1,36 +1,137 @@
 ﻿<Window x:Class="PRN_SafeDrive_Aplication.Student.StudentWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Student" Height="685" Width="1265" Background="White" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
-    <Grid>
-        <Label Content="Student" HorizontalAlignment="Left" Height="80" Margin="75,31,0,0" VerticalAlignment="Top" Width="569" FontWeight="Heavy" FontSize="50" FontStyle="Italic" Foreground="Black"/>
-        <Label x:Name="HelloMsgLabel" Content="Hello, Administrator" HorizontalAlignment="Left" Height="50" Margin="929,6,0,0" VerticalAlignment="Top" Width="315" FontSize="25" FontStyle="Italic" HorizontalContentAlignment="Right"/>
-        <Rectangle HorizontalAlignment="Left" Height="95" Margin="39,140,0,0" Stroke="Black" VerticalAlignment="Top" Width="1171" Fill="green" RadiusX="10" RadiusY="10" />
-        <Button x:Name="SearchButton" Content="Search Air Conditioner" HorizontalAlignment="Left" Height="50" Margin="75,162,0,0" VerticalAlignment="Top" Width="262" />
-        <Label Content="Feature Function" FontSize="20" HorizontalAlignment="Left" Height="45" Margin="358,169,0,0" VerticalAlignment="Top" Width="152" Foreground="White" RenderTransformOrigin="0.003,0.49"/>
-        <TextBox x:Name="FeatureFunctionTextBox" HorizontalAlignment="Left" Height="45" Margin="547,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="303"/>
-        <Label Content="Quantity" FontSize="20" HorizontalAlignment="Left" Height="45" Margin="876,167,0,0" VerticalAlignment="Top" Width="108" Foreground="White"/>
-        <TextBox x:Name="QuantityTextBox" HorizontalAlignment="Left" Height="45" Margin="1003,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185"/>
+        Title="Chỉnh sửa thông tin học sinh" Height="500" Width="700"
+        WindowStartupLocation="CenterScreen"
+        Background="#F8FAFC">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-        <Button x:Name="CreateButton" Content="Create Air Con" HorizontalAlignment="Left" Height="50" Margin="1003,294,0,0" VerticalAlignment="Top" Width="185"/>
-        <Button x:Name="UpdateButton" Content="Update Air Con" HorizontalAlignment="Left" Height="50" Margin="1003,367,0,0" VerticalAlignment="Top" Width="185"/>
-        <Button x:Name="DeleteButton" Content="Delete Air Con" HorizontalAlignment="Left" Height="50" Margin="1003,444,0,0" VerticalAlignment="Top" Width="185"/>
-        <Button x:Name="QuitButton" Content="Quit" HorizontalAlignment="Left" Height="50" Margin="1003,540,0,0" VerticalAlignment="Top" Width="185"/>
+        <!-- BẢNG THÔNG TIN CÁ NHÂN -->
+        <Border Grid.Row="0" CornerRadius="12" Background="White" Padding="16" 
+                BorderBrush="#E2E8F0" BorderThickness="1" Margin="0,0,0,12">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="User ID:" FontWeight="Bold" Foreground="#2563EB" Margin="0,0,8,6"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding UserID}" Foreground="#334155" Margin="0,0,0,6"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="Email:" FontWeight="Bold" Foreground="#2563EB" Margin="0,0,8,6"/>
+                <TextBlock Grid.Row="0" Grid.Column="3" Text="{Binding Email}" Foreground="#334155" Margin="0,0,0,6"/>
 
-        <DataGrid x:Name="AirConsDataGrid" HorizontalAlignment="Left" Height="310" Margin="50,290,0,0" VerticalAlignment="Top" Width="948" AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Width="40"/>
-                <DataGridTextColumn Header="Air Con Name" Width="200"/>
-                <DataGridTextColumn Header="Warranty" Width="70"/>
-                <DataGridTextColumn Header="Sound Level" Width="100"/>
-                <DataGridTextColumn Header="Feature Function" Width="200"/>
-                <DataGridTextColumn Header="Quantity" Width="70"/>
-                <DataGridTextColumn Header="Price ($)" Width="100"/>
-                <DataGridTextColumn Header="Supplier ID" Width="70"/>
-                <DataGridTextColumn Header="Supplier Name" Width="140"/>
-            </DataGrid.Columns>
-        </DataGrid>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Họ và tên:" FontWeight="Bold" Foreground="#2563EB" Margin="0,0,8,6"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding FullName}" Foreground="#334155" Margin="0,0,0,6"/>
+                <TextBlock Grid.Row="1" Grid.Column="2" Text="Lớp:" FontWeight="Bold" Foreground="#2563EB" Margin="0,0,8,6"/>
+                <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding Class}" Foreground="#334155" Margin="0,0,0,6"/>
 
-        <Label Content="© 2024 giáo.làng" HorizontalAlignment="Left" Height="45" Margin="34,605,0,0" VerticalAlignment="Top" Width="182" Foreground="#ffff00"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Trường:" FontWeight="Bold" Foreground="#2563EB" Margin="0,0,8,0"/>
+                <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding School}" Foreground="#334155" Margin="0,0,0,0"/>
+                <TextBlock Grid.Row="2" Grid.Column="2" Text="Số ĐT:" FontWeight="Bold" Foreground="#2563EB" Margin="0,0,8,0"/>
+                <TextBlock Grid.Row="2" Grid.Column="3" Text="{Binding Phone}" Foreground="#334155" Margin="0,0,0,0"/>
+            </Grid>
+        </Border>
+
+        <!-- TIÊU ĐỀ PHẦN CHỈNH SỬA -->
+        <TextBlock Grid.Row="1" Text="Chỉnh sửa thông tin học sinh" 
+                   FontSize="18" FontWeight="Bold" Foreground="#2563EB" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,6"/>
+
+        <!-- FORM CHỈNH SỬA -->
+        <Border Grid.Row="2" CornerRadius="12" Background="White" Padding="24" BorderBrush="#E2E8F0" BorderThickness="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="140"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Họ và tên:" 
+                           Foreground="#334155" FontWeight="SemiBold" FontSize="15"
+                           VerticalAlignment="Center" Margin="0,0,10,16"/>
+                <TextBox Grid.Row="0" Grid.Column="1" Name="txtHoTen"
+                         Margin="0,0,0,16"
+                         Height="34" Padding="10,0"
+                         FontSize="15" BorderBrush="#CBD5E1" BorderThickness="1"
+                         Background="#F1F5F9" 
+                         VerticalContentAlignment="Center"/>
+                <!--
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Email:"
+                           Foreground="#334155" FontWeight="SemiBold" FontSize="15"
+                           VerticalAlignment="Center" Margin="0,0,10,16"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Name="txtEmail"
+                         Margin="0,0,0,16"
+                         Height="34" Padding="10,0"
+                         FontSize="15" BorderBrush="#CBD5E1" BorderThickness="1"
+                         Background="#F1F5F9"
+                         VerticalContentAlignment="Center"/>-->
+
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Lớp:"
+                           Foreground="#334155" FontWeight="SemiBold" FontSize="15"
+                           VerticalAlignment="Center" Margin="0,0,10,16"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Name="txtLop"
+                         Margin="0,0,0,16"
+                         Height="34" Padding="10,0"
+                         FontSize="15" BorderBrush="#CBD5E1" BorderThickness="1"
+                         Background="#F1F5F9"
+                         VerticalContentAlignment="Center"/>
+
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Trường:"
+                           Foreground="#334155" FontWeight="SemiBold" FontSize="15"
+                           VerticalAlignment="Center" Margin="0,0,10,16"/>
+                <TextBox Grid.Row="3" Grid.Column="1" Name="txtTruong"
+                         Margin="0,0,0,16"
+                         Height="34" Padding="10,0"
+                         FontSize="15" BorderBrush="#CBD5E1" BorderThickness="1"
+                         Background="#F1F5F9"
+                         VerticalContentAlignment="Center"/>
+
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Số điện thoại:"
+                           Foreground="#334155" FontWeight="SemiBold" FontSize="15"
+                           VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBox Grid.Row="4" Grid.Column="1" Name="txtSoDienThoai"
+                         Height="34" Padding="10,0"
+                         FontSize="15" BorderBrush="#CBD5E1" BorderThickness="1"
+                         Background="#F1F5F9"
+                         VerticalContentAlignment="Center"/>
+
+                <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+                            Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,22,0,0">
+                    <Button x:Name="btnLuu"
+                            Width="110" Height="38"
+                            Content="💾  Lưu"
+                            Background="#2563EB" Foreground="White"
+                            FontWeight="SemiBold" FontSize="15"
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Click="btnLuu_Click"/>      
+                    <Button x:Name="btnHuy"
+                            Width="90" Height="38"
+                            Content="✖  Hủy"
+                            Background="#F1F5F9" Foreground="#334155"
+                            FontWeight="SemiBold" FontSize="15"
+                            BorderBrush="#CBD5E1" BorderThickness="1"
+                            Cursor="Hand" Margin="12,0,0,0" Click="btnHuy_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
     </Grid>
 </Window>

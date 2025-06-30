@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PRN_SafeDrive_Aplication.Student;
 
 namespace PRN_SafeDrive_Aplication.BiLL
 {
@@ -22,6 +23,12 @@ namespace PRN_SafeDrive_Aplication.BiLL
         public Home()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            StudentWindow s = new();
+            s.ShowDialog();
         }
     }
 }

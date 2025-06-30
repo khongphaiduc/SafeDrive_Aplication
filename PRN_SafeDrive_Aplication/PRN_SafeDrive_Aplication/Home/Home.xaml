@@ -84,7 +84,7 @@
                 <Border Style="{StaticResource CardStyle}" Width="290">
                     <StackPanel>
                         <TextBlock Text="👨‍🎓 Học sinh" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
-                        <Button Content="Cập nhật thông tin" Style="{StaticResource ModernButton}"/>
+                        <Button Content="Cập nhật thông tin" Style="{StaticResource ModernButton}" Click="Button_Click"/>
                         <Button Content="Đăng ký khóa học" Style="{StaticResource ModernButton}"/>
                         <Button Content="Theo dõi kết quả" Style="{StaticResource ModernButton}"/>
                     </StackPanel>
