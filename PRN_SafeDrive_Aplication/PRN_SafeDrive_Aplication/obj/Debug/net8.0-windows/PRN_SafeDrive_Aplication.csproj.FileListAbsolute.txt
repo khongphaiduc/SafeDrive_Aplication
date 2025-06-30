@@ -273,3 +273,5 @@ E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\obj\De
 E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\obj\Debug\net8.0-windows\PRN_SafeDrive_Aplication.genruntimeconfig.cache
 E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\obj\Debug\net8.0-windows\ref\PRN_SafeDrive_Aplication.dll
 >>>>>>> 2b6070090ef490943ec845f11ebe3e47699c4407
+D:\Project_PRN\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\obj\Debug\net8.0-windows\Home\Home.baml
+D:\Project_PRN\SafeDrive_Aplication\PRN_SafeDrive_Aplication\PRN_SafeDrive_Aplication\obj\Debug\net8.0-windows\Home\Home.g.cs

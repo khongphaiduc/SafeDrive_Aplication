@@ -141,3 +141,13 @@ E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\ProjectTestUnit\obj\Debug\net8.
 E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\ProjectTestUnit\obj\Debug\net8.0-windows7.0\ProjectTestUnit.pdb
 E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\ProjectTestUnit\obj\Debug\net8.0-windows7.0\ProjectTestUnit.genruntimeconfig.cache
 E:\SafeDrive_Aplication\PRN_SafeDrive_Aplication\ProjectTestUnit\obj\Debug\net8.0-windows7.0\ref\ProjectTestUnit.dll
+D:\Project_PRN\SafeDrive_Aplication\PRN_SafeDrive_Aplication\ProjectTestUnit\bin\Debug\net8.0-windows7.0\CoverletSourceRootsMapping_ProjectTestUnit
+D:\Project_PRN\SafeDrive_Aplication\PRN_SafeDrive_Aplication\ProjectTestUnit\obj\Debug\net8.0-windows7.0\ProjectTestUnit.csproj.AssemblyReference.cache
+D:\Project_PRN\SafeDrive_Aplication\PRN_SafeDrive_Aplication\ProjectTestUnit\obj\Debug\net8.0-windows7.0\ProjectTestUnit.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project_PRN\SafeDrive_Aplication\PRN_SafeDrive_Aplication\ProjectTestUnit\obj\Debug\net8.0-windows7.0\ProjectTestUnit.AssemblyInfoInputs.cache
+D:\Project_PRN\SafeDrive_Aplication\PRN_SafeDrive_Aplication\ProjectTestUnit\obj\Debug\net8.0-windows7.0\ProjectTestUnit.AssemblyInfo.cs
+D:\Project_PRN\SafeDrive_Aplication\PRN_SafeDrive_Aplication\ProjectTestUnit\obj\Debug\net8.0-windows7.0\ProjectTestUnit.csproj.CoreCompileInputs.cache
+D:\Project_PRN\SafeDrive_Aplication\PRN_SafeDrive_Aplication\ProjectTestUnit\obj\Debug\net8.0-windows7.0\ProjectTestUnit.sourcelink.json
+D:\Project_PRN\SafeDrive_Aplication\PRN_SafeDrive_Aplication\ProjectTestUnit\obj\Debug\net8.0-windows7.0\ProjectTestUnit.dll
+D:\Project_PRN\SafeDrive_Aplication\PRN_SafeDrive_Aplication\ProjectTestUnit\obj\Debug\net8.0-windows7.0\refint\ProjectTestUnit.dll
+D:\Project_PRN\SafeDrive_Aplication\PRN_SafeDrive_Aplication\ProjectTestUnit\obj\Debug\net8.0-windows7.0\ProjectTestUnit.pdb

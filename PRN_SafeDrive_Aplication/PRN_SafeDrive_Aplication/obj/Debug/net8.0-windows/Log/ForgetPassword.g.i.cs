@@ -60,7 +60,7 @@ namespace PRN_SafeDrive_Aplication.Log {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PRN_SafeDrive_Aplication;V1.0.0.0;component/log/forgetpassword.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PRN_SafeDrive_Aplication;component/log/forgetpassword.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Log\ForgetPassword.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

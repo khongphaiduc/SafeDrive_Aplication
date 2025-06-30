@@ -1,7 +1,7 @@
 ﻿<Window x:Class="PRN_SafeDrive_Aplication.Student.StudentWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Student" Height="685" Width="1265" Background="White" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Loaded="Window_Loaded" >
+        Title="Student" Height="685" Width="1265" Background="White" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Label Content="Student" HorizontalAlignment="Left" Height="80" Margin="75,31,0,0" VerticalAlignment="Top" Width="569" FontWeight="Heavy" FontSize="50" FontStyle="Italic" Foreground="Black"/>
         <Label x:Name="HelloMsgLabel" Content="Hello, Administrator" HorizontalAlignment="Left" Height="50" Margin="929,6,0,0" VerticalAlignment="Top" Width="315" FontSize="25" FontStyle="Italic" HorizontalContentAlignment="Right"/>
