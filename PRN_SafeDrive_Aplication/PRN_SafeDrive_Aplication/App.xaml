@@ -4,4 +4,11 @@
              xmlns:local="clr-namespace:PRN_SafeDrive_Aplication"
              StartupUri="Log/Login.xaml">
 
+    <!--  StartupUri="Log/Login.xaml"         StartupUri="Student/StudentWindow.xaml" > >-->
+
+
+    <Application.Resources>
+
+    </Application.Resources>
+
 </Application>

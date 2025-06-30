@@ -14,6 +14,9 @@
     <Compile Update="Log\RegisterAccount.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Student\StudentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Test\TestProject.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
