@@ -30,5 +30,11 @@ namespace PRN_SafeDrive_Aplication.BiLL
             StudentWindow s = new();
             s.ShowDialog();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            StudentWindow s = new();
+            s.ShowDialog();
+        }
     }
 }
