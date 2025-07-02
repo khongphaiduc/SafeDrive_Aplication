@@ -64,8 +64,8 @@
         <StackPanel Background="#2c3e50" Orientation="Vertical" Grid.Column="0">
             <TextBlock Text="🚗 SafeDrive" FontSize="22" Foreground="White" FontWeight="Bold" Margin="20"/>
             <Button Content="🏠 Trang chủ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
-            <Button Content="👤 Hồ sơ cá nhân" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
-            <Button Content="📚 Khóa học" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="👤 Hồ sơ cá nhân" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_1"/>
+            <Button Content="📚 Khóa học" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_2"/>
             <Button Content="📝 Kỳ thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
             <Button Content="📊 Thống kê" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
             <Button Content="⚙️ Cài đặt" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
@@ -80,63 +80,8 @@
 
             <WrapPanel Orientation="Horizontal" ItemWidth="300" ItemHeight="Auto">
 
-                <!-- Card: Học sinh -->
-                <Border Style="{StaticResource CardStyle}" Width="290">
-                    <StackPanel>
-                        <TextBlock Text="👨‍🎓 Học sinh" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
-                        <Button Content="Cập nhật thông tin" Style="{StaticResource ModernButton}" Click="Button_Click"/>
-                        <Button Content="Đăng ký khóa học" Style="{StaticResource ModernButton}"/>
-                        <Button Content="Theo dõi kết quả" Style="{StaticResource ModernButton}"/>
-                    </StackPanel>
-                </Border>
 
-                <!-- Card: Giảng viên -->
-                <Border Style="{StaticResource CardStyle}" Width="290">
-                    <StackPanel>
-                        <TextBlock Text="👩‍🏫 Giảng viên" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
-                        <Button Content="Tạo khóa học" Style="{StaticResource ModernButton}"/>
-                        <Button Content="Quản lý học sinh" Style="{StaticResource ModernButton}"/>
-                        <Button Content="Chấm điểm  đánh giá" Style="{StaticResource ModernButton}"/>
-                    </StackPanel>
-                </Border>
-
-                <!-- Card: Cảnh sát giao thông -->
-                <Border Style="{StaticResource CardStyle}" Width="290">
-                    <StackPanel>
-                        <TextBlock Text="🚓 Cảnh sát Giao thông" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
-                        <Button Content="Phê duyệt kỳ thi" Style="{StaticResource ModernButton}"/>
-                        <Button Content="Quản lý chứng chỉ" Style="{StaticResource ModernButton}"/>
-                    </StackPanel>
-                </Border>
-
-                <!-- Card: Thông báo -->
-                <Border Style="{StaticResource CardStyle}" Width="290">
-                    <StackPanel>
-                        <TextBlock Text="🔔 Thông báo  Giao tiếp" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
-                        <Button Content="Lịch học, thi" Style="{StaticResource ModernButton}"/>
-                        <Button Content="Kết quả thi" Style="{StaticResource ModernButton}"/>
-                        <Button Content="Trao đổi nội bộ" Style="{StaticResource ModernButton}"/>
-                    </StackPanel>
-                </Border>
-
-                <!-- Card: Báo cáo -->
-                <Border Style="{StaticResource CardStyle}" Width="290">
-                    <StackPanel>
-                        <TextBlock Text="📈 Báo cáo  Thống kê" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
-                        <Button Content="Số lượng học viên" Style="{StaticResource ModernButton}"/>
-                        <Button Content="Tỷ lệ đạt chứng chỉ" Style="{StaticResource ModernButton}"/>
-                    </StackPanel>
-                </Border>
-                <Border Style="{StaticResource CardStyle}" Width="290">
-                    <StackPanel>
-                        <TextBlock Text="💳 Thanh toán" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
-                        <Button Content="Lịch sử giao dịch" Style="{StaticResource ModernButton}"/>
-                        <Button Content="Thanh toán học phí" Style="{StaticResource ModernButton}"/>
-                    </StackPanel>
-                </Border>
-
-                <!-- Card: Học phí -->
-
+                
             </WrapPanel>
         </ScrollViewer>
     </Grid>

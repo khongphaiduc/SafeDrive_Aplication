@@ -1,0 +1,142 @@
+﻿<Window x:Class="PRN_SafeDrive_Aplication.Teacher.ManageCoursesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Quản lý khóa học" Height="750" Width="1350"
+        WindowStartupLocation="CenterScreen"
+        Background="#F3F6FA">
+    <Grid>
+        <!-- Header -->
+        <Border Grid.ColumnSpan="2" Background="#2563EB" Height="72" VerticalAlignment="Top" CornerRadius="0,0,20,20">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="36,0">
+                <TextBlock Text="🗂️" FontSize="36" Margin="0,0,14,0" VerticalAlignment="Center"/>
+                <TextBlock Text="Quản lý khóa học" FontSize="29" FontWeight="Bold" Foreground="White" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+        <Grid Margin="0,72,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.2*"/>
+                <ColumnDefinition Width="3.3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- KHÓA HỌC -->
+            <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"
+                    CornerRadius="18" Background="White"
+                    BorderBrush="#CBD5E1" BorderThickness="1"
+                    Margin="28,24,16,28" Padding="22">
+                <StackPanel>
+                    <TextBlock Text="📚 Danh sách khóa học" FontSize="20" FontWeight="Bold"
+                               Foreground="#2563EB" Margin="0,0,0,18"/>
+                    <DataGrid Name="dgCourses"
+                              AutoGenerateColumns="False"
+                              Height="660"
+                              Width="540"
+                              CanUserAddRows="False"
+                              IsReadOnly="True"
+                              BorderBrush="#E2E8F0"
+                              BorderThickness="1"
+                              RowBackground="#F9FAFB"
+                              AlternatingRowBackground="#EEF2FB"
+                              ColumnHeaderHeight="42"
+                              RowHeight="42"
+                              FontSize="17"
+                              HeadersVisibility="Column"
+                              SelectionMode="Single"
+                              GridLinesVisibility="None"
+                              ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                              ScrollViewer.VerticalScrollBarVisibility="Auto"
+                              SelectionChanged="dgCourses_SelectionChanged">
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="#EFF6FF"/>
+                                <Setter Property="Foreground" Value="#1E293B"/>
+                                <Setter Property="FontWeight" Value="SemiBold"/>
+                                <Setter Property="FontSize" Value="16"/>
+                                <Setter Property="Height" Value="42"/>
+                                <Setter Property="Padding" Value="10,0"/>
+                                <Setter Property="BorderBrush" Value="#E2E8F0"/>
+                                <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                            </Style>
+                        </DataGrid.Resources>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding CourseID}" Width="55"/>
+                            <DataGridTextColumn Header="Tên khóa học" Binding="{Binding CourseName}" Width="180"/>
+                            
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </Border>
+
+            <!-- HỌC SINH -->
+            <Border Grid.Column="1" Grid.Row="0"
+                    CornerRadius="18" Background="White"
+                    BorderBrush="#CBD5E1" BorderThickness="1"
+                    Margin="0,24,32,14" Padding="22">
+                <StackPanel>
+                    <TextBlock Text="👨‍🎓 Học sinh tham gia" FontSize="20" FontWeight="Bold"
+                               Foreground="#2563EB" Margin="0,0,0,18"/>
+                    <DataGrid Name="dgStudents"
+                              AutoGenerateColumns="False"
+                              Height="310"
+                              Width="650"
+                              CanUserAddRows="False"
+                              IsReadOnly="True"
+                              BorderBrush="#E2E8F0"
+                              BorderThickness="1"
+                              RowBackground="#F9FAFB"
+                              AlternatingRowBackground="#EEF2FB"
+                              ColumnHeaderHeight="42"
+                              RowHeight="42"
+                              FontSize="17"
+                              HeadersVisibility="Column"
+                              SelectionMode="Single"
+                              GridLinesVisibility="None"
+                              ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                              ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="#EFF6FF"/>
+                                <Setter Property="Foreground" Value="#1E293B"/>
+                                <Setter Property="FontWeight" Value="SemiBold"/>
+                                <Setter Property="FontSize" Value="16"/>
+                                <Setter Property="Height" Value="42"/>
+                                <Setter Property="Padding" Value="10,0"/>
+                                <Setter Property="BorderBrush" Value="#E2E8F0"/>
+                                <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                            </Style>
+                        </DataGrid.Resources>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Họ tên" Binding="{Binding FullName}" Width="200"/>
+                            <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="260"/>
+                            <DataGridTextColumn Header="Trạng thái" Binding="{Binding Status}" Width="160"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </Border>
+
+            <!-- THÔNG TIN KHÓA HỌC -->
+            <Border Grid.Column="1" Grid.Row="1"
+                    CornerRadius="18" Background="White"
+                    BorderBrush="#CBD5E1" BorderThickness="1"
+                    Margin="0,12,32,28" Padding="22">
+                <StackPanel>
+                    <TextBlock Text="✏️ Thông tin chi tiết khóa học" FontSize="20" FontWeight="Bold"
+                               Foreground="#2563EB" Margin="0,0,0,18"/>
+                    <StackPanel Orientation="Vertical" Margin="0,0,0,10">
+                        <TextBlock Text="Tên khóa học:" FontWeight="SemiBold"/>
+                        <TextBlock x:Name="tbDetailName" FontSize="16" Foreground="#64748B"/>
+                        <TextBlock Text="Ngày bắt đầu:" FontWeight="SemiBold" Margin="0,10,0,0"/>
+                        <TextBlock x:Name="tbDetailStart" FontSize="16" Foreground="#64748B"/>
+                        <TextBlock Text="Ngày kết thúc:" FontWeight="SemiBold" Margin="0,10,0,0"/>
+                        <TextBlock x:Name="tbDetailEnd" FontSize="16" Foreground="#64748B"/>
+                        <TextBlock Text="Nội dung khóa học:" FontWeight="SemiBold" Margin="0,10,0,0"/>
+                        <TextBlock x:Name="tbDetailDesc" FontSize="16" Foreground="#64748B" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

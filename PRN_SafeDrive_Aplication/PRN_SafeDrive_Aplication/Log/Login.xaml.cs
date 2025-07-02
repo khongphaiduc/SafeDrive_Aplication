@@ -2,6 +2,7 @@
 using PRN_SafeDrive_Aplication.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,17 @@ namespace PRN_SafeDrive_Aplication.Log
             InitializeComponent();
         }
 
+        //lấy role xem là giáo viên, học sinh hay csgt
+        public static string GetRoleByEmail(string email)
+        {
+            using (var db = new Prn1Context())
+            {
+                return db.Users
+                    .Where(u => u.Email == email)
+                    .Select(u => u.Role)
+                    .FirstOrDefault() ?? "";
+            }
+        }
 
         // đăng nhập
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -43,6 +55,8 @@ namespace PRN_SafeDrive_Aplication.Log
 
 
                 SessionUser.Email = account; // Lưu email vào SessionUser
+                SessionUser.Role = GetRoleByEmail(account); //lưu role vào session
+                
 
                 home.Show();
                 this.Close();

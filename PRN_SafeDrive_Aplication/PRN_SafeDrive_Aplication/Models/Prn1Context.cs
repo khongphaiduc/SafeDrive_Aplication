@@ -36,7 +36,6 @@ public partial class Prn1Context : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("URL_SQL_SafeDrive"));
-
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

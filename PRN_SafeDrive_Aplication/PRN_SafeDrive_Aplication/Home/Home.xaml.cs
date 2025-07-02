@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using PRN_SafeDrive_Aplication.Student;
+using PRN_SafeDrive_Aplication.Teacher;
 
 namespace PRN_SafeDrive_Aplication.BiLL
 {
@@ -29,6 +30,18 @@ namespace PRN_SafeDrive_Aplication.BiLL
         {
             StudentWindow s = new();
             s.ShowDialog();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            StudentWindow s = new();
+            s.ShowDialog();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            ManageCoursesWindow m = new();
+            m.ShowDialog();
         }
     }
 }
