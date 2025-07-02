@@ -65,7 +65,7 @@
             <TextBlock Text="🚗 SafeDrive" FontSize="22" Foreground="White" FontWeight="Bold" Margin="20"/>
             <Button Content="🏠 Trang chủ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
             <Button Content="👤 Hồ sơ cá nhân" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_1"/>
-            <Button Content="📚 Khóa học" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="📚 Khóa học" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_2"/>
             <Button Content="📝 Kỳ thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
             <Button Content="📊 Thống kê" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
             <Button Content="⚙️ Cài đặt" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>

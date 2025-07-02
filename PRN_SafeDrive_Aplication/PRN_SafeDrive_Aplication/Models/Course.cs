@@ -11,6 +11,8 @@ public partial class Course
 
     public int TeacherId { get; set; }
 
+    public string ContentCourse {  get; set; } = null!;
+
     public DateOnly StartDate { get; set; }
 
     public DateOnly EndDate { get; set; }
