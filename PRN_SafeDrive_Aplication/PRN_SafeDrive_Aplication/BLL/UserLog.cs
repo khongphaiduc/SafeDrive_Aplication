@@ -1,5 +1,6 @@
 ﻿using PRN_SafeDrive_Aplication.BLL;
 using PRN_SafeDrive_Aplication.DAL;
+using PRN_SafeDrive_Aplication.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,9 +49,17 @@ namespace PRN_SafeDrive_Aplication.BiLL
             return register.Register(username, hashedPassword, salt, email, role);  // đăng ký tài khoản mới
         }
 
+        internal static int GetUserIdByEmail(string account)
+        {
 
+            using (var mydbcontext = new Prn1Context())
+            {
+                return mydbcontext.Users
+                    .Where(u => u.Email == account)
+                    .Select(u => u.UserId)
+                    .FirstOrDefault();
+            }
 
-
-
+        }
     }
 }

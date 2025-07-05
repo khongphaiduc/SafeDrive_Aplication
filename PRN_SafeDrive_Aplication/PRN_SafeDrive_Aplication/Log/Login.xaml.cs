@@ -51,12 +51,14 @@ namespace PRN_SafeDrive_Aplication.Log
 
             if (result)
             {
-                Home home = new Home();
+             
 
 
                 SessionUser.Email = account; // Lưu email vào SessionUser
                 SessionUser.Role = GetRoleByEmail(account); //lưu role vào session
-                
+                SessionUser.UserId = UserLog.GetUserIdByEmail(account); // Lưu ID người dùng vào SessionUser
+
+                Home home = new Home();   // brack point để xem thằng l email và role còn null hay không
 
                 home.Show();
                 this.Close();
