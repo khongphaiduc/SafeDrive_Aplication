@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PRN_SafeDrive_Aplication.Models;
 
@@ -7,6 +8,7 @@ public partial class User
 {
     public int UserId { get; set; }
 
+    [Column(TypeName ="nvarchar(200)")]
     public string FullName { get; set; } = null!;
 
     public string Email { get; set; } = null!;
@@ -19,6 +21,7 @@ public partial class User
 
     public string? Class { get; set; }
 
+    [Column(TypeName = "nvarchar(200)")]
     public string? School { get; set; }
 
     public string? Phone { get; set; }

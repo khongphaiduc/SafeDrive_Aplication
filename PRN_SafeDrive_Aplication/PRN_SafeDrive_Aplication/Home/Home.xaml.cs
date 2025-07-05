@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using PRN_SafeDrive_Aplication.Models;
+using PRN_SafeDrive_Aplication.Police;
 using PRN_SafeDrive_Aplication.Student;
 using PRN_SafeDrive_Aplication.Teacher;
 
@@ -84,5 +85,12 @@ namespace PRN_SafeDrive_Aplication.BiLL
             MainContent.Content = new CreateCourse();
         }
 
+        
+
+        // tổ trức kỳ thi
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new DisplayListExams();
+        }
     }
 }

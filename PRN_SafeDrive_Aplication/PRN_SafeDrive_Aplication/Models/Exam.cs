@@ -13,6 +13,10 @@ public partial class Exam
 
     public string Room { get; set; } = null!;
 
+    public int ExamerId { get; set; }
+    
+
+    public string Status { get; set; }
     public virtual Course Course { get; set; } = null!;
 
     public virtual ICollection<Result> Results { get; set; } = new List<Result>();
