@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PRN_SafeDrive_Aplication.Home;
 using PRN_SafeDrive_Aplication.Models;
 using PRN_SafeDrive_Aplication.Police;
 using PRN_SafeDrive_Aplication.Student;
@@ -21,16 +22,16 @@ namespace PRN_SafeDrive_Aplication.BiLL
     /// <summary>
     /// Interaction logic for Home.xaml
     /// </summary>
-    public partial class Home : Window
+    public partial class Homes : Window
     {
-        public Home()
+        public Homes()
         {
             InitializeComponent();
             UIStudent.Visibility = Visibility.Collapsed;
             UITeachers.Visibility = Visibility.Collapsed;
             UIPolice.Visibility = Visibility.Collapsed;
 
-            
+
             string roleTest = SessionUser.Role;
             string emailTest = SessionUser.Email;
 
@@ -72,25 +73,52 @@ namespace PRN_SafeDrive_Aplication.BiLL
             s.ShowDialog();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+
+        // hiện  thị khóa học với view là công an
+        private void DisplayCourseOfPolice(object sender, RoutedEventArgs e)
         {
-            ManageCoursesWindow m = new();
-            m.ShowDialog();
+            MainContent.Content = new DisplayListAllCourse();
         }
 
 
+        // hiện thị tất cả khóa học của teacher 
+        private void DisplayCourseOfTeacher(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new DisplayListCourseOfTeacher();
+        }
 
+
+        // tạo khóa học dành cho teacher
         private void Button_Click_taokhoahoc(object sender, RoutedEventArgs e)
         {
             MainContent.Content = new CreateCourse();
         }
 
-        
 
-        // tổ trức kỳ thi
+
+        // tổ trức kỳ thi dành cho  cảnh sát 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             MainContent.Content = new DisplayListExams();
         }
+
+
+
+
+
+        private void HomeStudent(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new HomeUserControl();
+        }
+        private void HomeTeacher(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new HomeUserControl();
+        }
+        private void HomePolice(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new HomeUserControl();
+        }
+
+
     }
 }
