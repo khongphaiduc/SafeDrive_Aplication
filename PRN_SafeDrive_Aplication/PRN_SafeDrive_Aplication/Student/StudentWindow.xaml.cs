@@ -16,6 +16,7 @@ namespace PRN_SafeDrive_Aplication.Student
 
             // Lấy email từ SessionUser
             string email = SessionUser.Email;
+
             currentUser = _context.Users.FirstOrDefault(u => u.Email == email);
 
             if (currentUser != null)

@@ -1,0 +1,68 @@
+﻿<Window x:Class="PRN_SafeDrive_Aplication.Views.StudentCoursesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Khóa học của tôi" Height="480" Width="840" WindowStartupLocation="CenterScreen" Background="#F3F6FB">
+    <Border Margin="20" Background="White" CornerRadius="14">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- BÊN TRÁI: Danh sách khóa học -->
+            <StackPanel Grid.Column="0" Margin="18,18,12,18">
+                <TextBlock Text="Khóa học đã tham gia" FontWeight="SemiBold" FontSize="20" Foreground="#2563EB" Margin="0,0,0,14"/>
+                <ListBox x:Name="lstCourses"
+                         SelectionChanged="lstCourses_SelectionChanged"
+                         Background="#F5F7FB"
+                         BorderThickness="0"
+                         ScrollViewer.VerticalScrollBarVisibility="Auto"
+                         Padding="6">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border CornerRadius="8" Padding="8" Margin="0,0,0,6" Background="Transparent">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding Index}" 
+                                               FontWeight="Bold" 
+                                               FontSize="15"
+                                               Padding="8,2"
+                                               Background="#2563EB"
+                                               Foreground="White"
+                                               Margin="0,0,8,0"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               TextAlignment="Center"/>
+                                    <TextBlock Text="{Binding CourseName}" FontSize="15" VerticalAlignment="Center"
+                                               Foreground="#222" FontWeight="Medium"/>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+
+            <!-- BÊN PHẢI: Thông tin chi tiết -->
+            <Border Grid.Column="1" Margin="0,18,18,18" Background="#F9FBFE" CornerRadius="12" Padding="28">
+                <StackPanel>
+                    <TextBlock Text="Thông tin chi tiết" FontWeight="Bold" FontSize="22" Foreground="#2563EB" Margin="0,0,0,22"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                        <TextBlock Text="Giáo viên: " FontWeight="SemiBold" FontSize="15" Foreground="#444"/>
+                        <TextBlock x:Name="tbTeacher" FontSize="15" Foreground="#555"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                        <TextBlock Text="Ngày bắt đầu: " FontWeight="SemiBold" FontSize="15" Foreground="#444"/>
+                        <TextBlock x:Name="tbStartDate" FontSize="15" Foreground="#555"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                        <TextBlock Text="Ngày kết thúc: " FontWeight="SemiBold" FontSize="15" Foreground="#444"/>
+                        <TextBlock x:Name="tbEndDate" FontSize="15" Foreground="#555"/>
+                    </StackPanel>
+                    <TextBlock Text="Mô tả khóa học" FontWeight="SemiBold" FontSize="15" Foreground="#444" Margin="0,8,0,3"/>
+                    <Border Background="White" CornerRadius="8" Padding="10">
+                        <TextBlock x:Name="tbDescription" Foreground="#555" TextWrapping="Wrap" FontSize="15"/>
+                    </Border>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
