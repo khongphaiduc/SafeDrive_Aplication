@@ -18,7 +18,7 @@ namespace PRN_SafeDrive_Aplication.Teacher
 
             // Lấy email giáo viên từ session (giả sử đã lưu trong SessionUser.Email)
             string teacherEmail = SessionUser.Email;
-
+            Console.WriteLine($"Bên thằng đức anh {SessionUser.Email}");
             // Tìm giáo viên theo email
             var teacher = _context.Users.FirstOrDefault(u => u.Email == teacherEmail && u.Role == "Teacher");
             if (teacher == null)

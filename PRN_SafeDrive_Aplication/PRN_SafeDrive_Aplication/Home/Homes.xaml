@@ -1,0 +1,108 @@
+﻿<Window x:Class="PRN_SafeDrive_Aplication.BiLL.Homes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SafeDrive Dashboard" Height="804" Width="1581" Background="#f4f6f9"
+        Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen">
+
+
+
+    <Window.Resources>
+
+
+
+        <!-- Style cho các card chức năng -->
+        <Style x:Key="CardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Gray" BlurRadius="10" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style cho nút chức năng -->
+        <Style x:Key="ModernButton" TargetType="Button">
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Background" Value="#3498db"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <!-- Không dùng CornerRadius ở đây -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <!-- Border với CornerRadius nằm trong đây -->
+                        <Border Background="{TemplateBinding Background}" CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#2980b9"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Sidebar  của thằng student  -->
+        <StackPanel x:Name="UIStudent" Background="#2c3e50" Orientation="Vertical" Grid.Column="0">
+            <TextBlock Text="🚗 SafeDrive" FontSize="22" Foreground="White" FontWeight="Bold" Margin="20"/>
+            <Button Content="🏠 Trang chủ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="HomeStudent"/>
+            <Button Content="👤 Hồ sơ cá nhân" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_1"/>
+            <Button Content="📚 Tìm Khóa học" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" />
+            <Button Content="📚  Khóa Học Của Tôi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="📝 Kỳ thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="📊 Thống kê" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="⚙️ Cài đặt" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+        </StackPanel>
+
+        <!-- Sidebar  của thằng Teacher  -->
+        <StackPanel x:Name="UITeachers" Background="#2c3e50" Orientation="Vertical" Grid.Column="0">
+            <TextBlock Text="🚗 SafeDrive" FontSize="22" Foreground="White" FontWeight="Bold" Margin="20"/>
+            <Button Content="🏠 Trang chủ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="HomeTeacher"/>
+            <Button Content="👤 Hồ sơ cá nhân" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_1"/>
+            <Button Content="📚 Quản Lý Khóa học" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="DisplayCourseOfTeacher"/>
+            <Button Content="📝 Tạo Khóa Học Mới" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_taokhoahoc"/>
+            <Button Content="📝 Kỳ thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="📊 Thống kê lớp học" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="⚙️ Cài đặt" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+        </StackPanel>
+
+        <!-- Sidebar  của Công An  -->
+        <StackPanel x:Name="UIPolice" Background="#2c3e50" Orientation="Vertical" Grid.Column="0">
+            <TextBlock Text="🚗 SafeDrive" FontSize="22" Foreground="White" FontWeight="Bold" Margin="20"/>
+            <Button Content="🏠 Trang chủ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"  Click="HomePolice" />
+            <Button Content="👤 Hồ sơ cá nhân" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_1"/>
+            <Button Content="📚 Khóa học hiện có" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="DisplayCourseOfPolice"/>
+            <Button Content="📝 Tổ Trức Kỳ Thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_3"/>
+            <Button Content="📝 Nhập Điểm" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="📊 Danh Sách Chứng Chỉ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="⚙️ Cài đặt" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+        </StackPanel>
+
+        <!-- Nội dung chính -->
+        <ContentControl x:Name="MainContent" Grid.Column="1" Margin="5,-10,-5,10" AutomationProperties.IsOffscreenBehavior="Onscreen">
+          
+        </ContentControl>
+
+
+
+    </Grid>
+</Window>

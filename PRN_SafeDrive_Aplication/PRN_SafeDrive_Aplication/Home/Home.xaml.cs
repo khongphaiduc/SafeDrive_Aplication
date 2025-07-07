@@ -51,8 +51,8 @@ namespace PRN_SafeDrive_Aplication.BiLL
 
         private void khoaHocStu_Click(object sender, RoutedEventArgs e)
         {
-            ViewCoursesWindow v = new();
-            v.ShowDialog();
+           // ViewCoursesWindow v = new();
+          //  v.ShowDialog();
         }
     }
 }
