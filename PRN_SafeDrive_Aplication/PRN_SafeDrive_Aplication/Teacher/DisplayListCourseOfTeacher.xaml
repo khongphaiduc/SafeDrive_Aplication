@@ -8,20 +8,27 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="#F6F8FB">
         <Border 
-        Background="White"
-        CornerRadius="16"
-        Padding="24"
-        Margin="32"
-        Effect="{DynamicResource DropShadow}">
-            <StackPanel>
-                <TextBlock Text="Danh sách khóa học bạn đang phụ trách"
-                       FontSize="28"
-                       FontWeight="Bold"
-                       Foreground="#304FFE"
-                       Margin="0 0 0 24"
-                       HorizontalAlignment="Center"
-                       TextAlignment="Center"/>
-                <DataGrid x:Name="CourseDataGridOfTeacher"
+            Background="White"
+            CornerRadius="16"
+            Padding="24"
+            Margin="32"
+            Effect="{DynamicResource DropShadow}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"
+                           Text="Danh sách khóa học bạn đang phụ trách"
+                           FontSize="28"
+                           FontWeight="Bold"
+                           Foreground="#304FFE"
+                           Margin="0 0 0 24"
+                           HorizontalAlignment="Center"
+                           TextAlignment="Center"/>
+                <DataGrid Grid.Row="1"
+                      x:Name="CourseDataGridOfTeacher"
                       AutoGenerateColumns="False"
                       CanUserAddRows="False"
                       IsReadOnly="True"
@@ -75,7 +82,12 @@
                         <DataGridTextColumn Header="Ngày kết thúc" Binding="{Binding DateEnd, StringFormat=dd/MM/yyyy}" Width="120"/>
                     </DataGrid.Columns>
                 </DataGrid>
-            </StackPanel>
+                <Label Grid.Row="2"
+                       Content="Double click vào khóa học để xem danh sách học sinh của khóa"
+                       FontStyle="Oblique"
+                       HorizontalAlignment="Center"
+                       Margin="0,12,0,0"/>
+            </Grid>
         </Border>
         <Grid.Resources>
             <DropShadowEffect x:Key="DropShadow" BlurRadius="10" ShadowDepth="2" Color="#888" Opacity="0.12" />
