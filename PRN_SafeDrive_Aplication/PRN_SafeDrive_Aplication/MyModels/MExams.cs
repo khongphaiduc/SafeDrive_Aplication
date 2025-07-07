@@ -8,7 +8,8 @@ namespace PRN_SafeDrive_Aplication.MyModels
 {
     public class MExams
     {
-
+        public int IDExam { get; set; }
+        public int IDCourse { get; set; }
         public string NameCourse { get; set; } = null!;
 
         public string CodeCertificate { get; set; } = null!;

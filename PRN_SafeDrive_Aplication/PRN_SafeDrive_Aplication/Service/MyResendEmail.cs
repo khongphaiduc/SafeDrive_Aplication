@@ -5,19 +5,20 @@ using System.Windows;
 using Microsoft.Extensions.Options;
 using System.Net;
 using System.Net.Mail;
+using PRN_SafeDrive_Aplication.Models;
 namespace PRN_SafeDrive_Aplication.Service
 {
     public class MyResendEmail
     {
 
         // gửi mail 
-        public static async Task SendGmailAsync(string toEmail,string titel, string content)
+        public static async Task SendGmailAsyncs(string toEmail, string titel, string content)
         {
             var fromAddress = new MailAddress("vietchobann@gmail.com", "Exam SafeDrive");
             var toAddress = new MailAddress(toEmail);
-            const string fromPassword = "qpqu grpb nngn hmyt"; 
+            const string fromPassword = "qpqu grpb nngn hmyt";
 
-             string body = "<strong>"+(content ?? "Test thong bao hihih") +"</strong>";
+            string body = "<strong>" + (content ?? "Test thong bao hihih") + "</strong>";
 
             var smtp = new SmtpClient
             {
@@ -37,10 +38,13 @@ namespace PRN_SafeDrive_Aplication.Service
             })
             {
                 await smtp.SendMailAsync(message);
-               
+
                 MessageBox.Show("✅ Email sent successfully!");
             }
         }
+
+
+
 
     }
 }

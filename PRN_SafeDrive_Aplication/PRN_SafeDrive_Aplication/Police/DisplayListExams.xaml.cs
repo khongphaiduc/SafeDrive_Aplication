@@ -62,6 +62,8 @@ namespace PRN_SafeDrive_Aplication.Police
             dgExams.ItemsSource = ListExams;
         }
 
+
+
         // lấy danh sách các kỳ thi 
         public List<MExams> GetListExam()
         {
@@ -76,6 +78,8 @@ namespace PRN_SafeDrive_Aplication.Police
                            select
                               new MExams
                               {
+                                  IDExam = a.ExamId,
+                                  IDCourse = b.CourseId,
                                   NameCourse = b.CourseName,
                                   CodeCertificate = d.CertificateCode,
                                   Date = a.Date.ToString("yyyy-MM-dd"),
@@ -102,14 +106,57 @@ namespace PRN_SafeDrive_Aplication.Police
 
 
 
+        public Exam GetExamNewlyAdded()
+        {
+            try
+            {
+
+
+                using (Prn1Context mydbcontext = new Prn1Context())
+                {
+                    var s = (from k in mydbcontext.Exams
+                             orderby k.ExamId descending
+                             select k).FirstOrDefault();
+
+                    return s; // Trả về kỳ thi mới nhất
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show($"Lỗi : {ex.Message}");
+                return new();
+            }
+
+        }
+
+
+
         private void btnCreateExam_Click(object sender, RoutedEventArgs e)
         {
             var s = new CreateExam();
-            if(s.ShowDialog() == true)
+            if (s.ShowDialog() == true)
             {
                 LoadExams(); // Tải lại danh sách kỳ thi sau khi tạo mới
             }
-          
+
+        }
+
+
+
+        // mở screen để cảnh sát ghi nhập điểm số 
+        public void InputMark(object sender, RoutedEventArgs e)
+        {
+
+            var UserSelected = (MExams)dgExams.SelectedItem;
+
+            int IDCouse = UserSelected.IDCourse;
+            int IDExam = UserSelected.IDExam;
+            var s = new PoliceInputMark(IDCouse,IDExam);
+
+            s.ShowDialog();
+
         }
     }
 
