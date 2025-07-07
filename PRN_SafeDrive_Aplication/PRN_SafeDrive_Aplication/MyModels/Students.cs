@@ -15,5 +15,6 @@ namespace PRN_SafeDrive_Aplication.MyModels
         public string School { get; set; }
         public string Phone { get; set; }
 
+        public Decimal Mark { get; set; } 
     }
 }
