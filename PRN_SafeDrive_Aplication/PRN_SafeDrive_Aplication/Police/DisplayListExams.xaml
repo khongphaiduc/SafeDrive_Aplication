@@ -12,15 +12,25 @@
                 Padding="24"
                 Margin="32"
                 Effect="{DynamicResource DropShadow}">
-            <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <TextBlock Text="DANH SÁCH CÁC KỲ THI HIỆN TẠI"
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <!-- Tiêu đề -->
+                    <RowDefinition Height="*"/>
+                    <!-- Bảng -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Nút -->
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"
+                           Text="DANH SÁCH CÁC KỲ THI HIỆN TẠI"
                            FontWeight="Bold"
                            FontSize="26"
                            Margin="0,0,0,24"
                            Foreground="#304FFE"
                            HorizontalAlignment="Center"
                            TextAlignment="Center"/>
-                <DataGrid x:Name="dgExams"
+                <DataGrid Grid.Row="1"
+                          x:Name="dgExams"
                           FontSize="16"
                           RowHeight="40"
                           ColumnHeaderHeight="48"
@@ -74,7 +84,22 @@
                         <DataGridTextColumn Header="Trạng Thái" Binding="{Binding Status}" Width="110"/>
                     </DataGrid.Columns>
                 </DataGrid>
-            </StackPanel>
+                <!-- Nút nằm ngoài (dưới) bảng -->
+                <Button Grid.Row="2"
+                        x:Name="btnCreateExam"
+                        Content="Tạo bài thi mới"
+                        Width="180"
+                        Height="40"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Background="#304FFE"
+                        Foreground="White"
+                        FontWeight="SemiBold"
+                        FontSize="16"
+                        BorderThickness="0"
+                        Cursor="Hand" Click="btnCreateExam_Click" Margin="608,0,0,0"
+                        />
+            </Grid>
         </Border>
         <Grid.Resources>
             <DropShadowEffect x:Key="DropShadow" BlurRadius="10" ShadowDepth="2" Color="#888" Opacity="0.12" />
