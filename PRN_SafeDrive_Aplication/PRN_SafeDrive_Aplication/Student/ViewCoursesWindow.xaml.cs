@@ -17,11 +17,11 @@ namespace PRN_SafeDrive_Aplication.Views
         {
             public int Index { get; set; }
             public int CourseId { get; set; }
-            public string CourseName { get; set; }
-            public string TeacherName { get; set; }
-            public DateTime? StartDate { get; set; }
-            public DateTime? EndDate { get; set; }
-            public string Description { get; set; }
+            public string? CourseName { get; set; }
+            public string? TeacherName { get; set; }
+            public DateOnly? StartDate { get; set; }
+            public DateOnly? EndDate { get; set; }
+            public string? Description { get; set; }
         }
 
         public StudentCoursesWindow(int studentId)

@@ -17,9 +17,9 @@ public partial class Course
     [Column(TypeName = "nvarchar(max)")]
     public string ContentCourse {  get; set; } = null!;
 
-    public DateTime? StartDate { get; set; }
+    public DateOnly StartDate { get; set; }
 
-    public DateTime? EndDate { get; set; }
+    public DateOnly EndDate { get; set; }
 
     public virtual ICollection<Exam> Exams { get; set; } = new List<Exam>();
 

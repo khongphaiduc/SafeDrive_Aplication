@@ -119,6 +119,9 @@ namespace PRN_SafeDrive_Aplication.BiLL
             MainContent.Content = new HomeUserControl();
         }
 
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }
