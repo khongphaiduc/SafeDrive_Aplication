@@ -15,8 +15,11 @@ public partial class Exam
 
     public int ExamerId { get; set; }
     
-
+   
     public string Status { get; set; }
+
+    public int IDCertificates { get; set; } 
+
     public virtual Course Course { get; set; } = null!;
 
     public virtual ICollection<Result> Results { get; set; } = new List<Result>();

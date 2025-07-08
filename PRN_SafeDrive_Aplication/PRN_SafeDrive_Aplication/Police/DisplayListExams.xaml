@@ -4,23 +4,31 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="743">
-    <Grid Background="#F6F8FB"
-          HorizontalAlignment="Stretch"
-          VerticalAlignment="Stretch">
+    <Grid Background="#F6F8FB" Margin="0,0,-397,0">
         <Border Background="White"
                 CornerRadius="16"
                 Padding="24"
-                Margin="32"
-                Effect="{DynamicResource DropShadow}">
-            <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <TextBlock Text="DANH SÁCH CÁC KỲ THI HIỆN TẠI"
+                Margin="32,32,0,32"
+                Effect="{DynamicResource DropShadow}" HorizontalAlignment="Left" Width="1257">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <!-- Tiêu đề -->
+                    <RowDefinition Height="*"/>
+                    <!-- Bảng -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Nút -->
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"
+                           Text="DANH SÁCH KỲ THI"
                            FontWeight="Bold"
                            FontSize="26"
                            Margin="0,0,0,24"
                            Foreground="#304FFE"
                            HorizontalAlignment="Center"
                            TextAlignment="Center"/>
-                <DataGrid x:Name="dgExams"
+                <DataGrid
+                          x:Name="dgExams"
                           FontSize="16"
                           RowHeight="40"
                           ColumnHeaderHeight="48"
@@ -28,14 +36,17 @@
                           CanUserAddRows="False"
                           IsReadOnly="True"
                           HeadersVisibility="Column"
-                          HorizontalAlignment="Stretch"
-                          VerticalAlignment="Stretch"
+                          HorizontalAlignment="Left"
                           Height="562"
                           GridLinesVisibility="None"
                           RowHeaderWidth="0"
                           BorderThickness="0"
                           Background="White"
-                          Foreground="#222">
+                          Foreground="#222"
+                          MouseDoubleClick="InputMark"
+                          Margin="10,49,0,20"
+                          Grid.RowSpan="3"
+                          Width="1200">
                     <DataGrid.Resources>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#E3E7ED"/>
@@ -66,15 +77,33 @@
                         </Style>
                     </DataGrid.Resources>
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Tên khóa học" Binding="{Binding NameCourse}" Width="*"/>
-                        <DataGridTextColumn Header="Code Chứng Chỉ" Binding="{Binding CodeCertificate}" Width="130"/>
-                        <DataGridTextColumn Header="Ngày thi" Binding="{Binding Date, StringFormat=dd/MM/yyyy}" Width="130"/>
-                        <DataGridTextColumn Header="Phòng" Binding="{Binding Room}" Width="90"/>
-                        <DataGridTextColumn Header="Giáo viên coi thi" Binding="{Binding Examer}" Width="200"/>
-                        <DataGridTextColumn Header="Trạng Thái" Binding="{Binding Status}" Width="110"/>
+                        <DataGridTextColumn Header="ID Exam" Binding="{Binding IDExam}" Width="80"/>
+                        <DataGridTextColumn Header="ID khóa" Binding="{Binding IDCourse}" Width="80"/>
+                        <DataGridTextColumn Header="Tên khóa học" Binding="{Binding NameCourse}" Width="220"/>
+                        <DataGridTextColumn Header="Mã chứng chỉ" Binding="{Binding CodeCertificate}" Width="120"/>
+                        <DataGridTextColumn Header="Ngày thi" Binding="{Binding Date, StringFormat=dd/MM/yyyy}" Width="110"/>
+                        <DataGridTextColumn Header="Phòng thi" Binding="{Binding Room}" Width="90"/>
+                        <DataGridTextColumn Header="Giáo viên coi" Binding="{Binding Examer}" Width="200"/>
+                        <DataGridTextColumn Header="Trạng thái" Binding="{Binding Status}" Width="110"/>
                     </DataGrid.Columns>
                 </DataGrid>
-            </StackPanel>
+                <!-- Nút nằm ngoài (dưới) bảng -->
+                <Button Grid.Row="2"
+                        x:Name="btnCreateExam"
+                        Content="Tạo kỳ thi mới"
+                        Width="180"
+                        Height="40"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Background="#304FFE"
+                        Foreground="White"
+                        FontWeight="SemiBold"
+                        FontSize="16"
+                        BorderThickness="0"
+                        Cursor="Hand"
+                        Click="btnCreateExam_Click"
+                        Margin="924,0,0,0"/>
+            </Grid>
         </Border>
         <Grid.Resources>
             <DropShadowEffect x:Key="DropShadow" BlurRadius="10" ShadowDepth="2" Color="#888" Opacity="0.12" />

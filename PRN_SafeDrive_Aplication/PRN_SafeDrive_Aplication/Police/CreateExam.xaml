@@ -1,0 +1,51 @@
+﻿<Window x:Class="PRN_SafeDrive_Aplication.Police.CreateExam"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tạo kỳ thi mới" Height="600" Width="500"
+        WindowStartupLocation="CenterScreen"
+        Background="#f4f7fa">
+    <Grid>
+        <Border Width="400" Padding="28" CornerRadius="16" Background="White"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                BorderBrush="#dbeafe" BorderThickness="1"
+                Effect="{DynamicResource DropShadow}">
+            <StackPanel>
+                <TextBlock Text="Tạo Lịch Thi Mới "
+                           FontSize="24" FontWeight="Bold" Foreground="#2563eb"
+                           HorizontalAlignment="Center" Margin="0,0,0,18"/>
+
+                <!-- Tên khóa học -->
+                <TextBlock Text="Tên khóa học" Margin="0,0,0,5" FontWeight="SemiBold"/>
+                <ComboBox Name="cbCourseName" Height="32" Margin="0,0,0,16" />
+
+                <!-- Code chứng chỉ -->
+                <TextBlock Text="Code chứng chỉ" Margin="0,0,0,5" FontWeight="SemiBold"/>
+                <ComboBox Name="cbCertificateCode" Height="32" Margin="0,0,0,16" />
+
+                <!-- Ngày thi -->
+                <TextBlock Text="Ngày thi" Margin="0,0,0,5" FontWeight="SemiBold"/>
+                <DatePicker Name="dpExamDate" Height="32" Margin="0,0,0,16" />
+
+                <!-- Phòng thi -->
+                <TextBlock Text="Phòng thi" Margin="0,0,0,5" FontWeight="SemiBold"/>
+                <ComboBox Name="cbRoom" Height="32" Margin="0,0,0,16" />
+
+                <!-- Giáo viên coi thi -->
+                <TextBlock Text="Giáo viên coi thi" Margin="0,0,0,5" FontWeight="SemiBold"/>
+                <ComboBox Name="cbExamer" Height="32" Margin="0,0,0,26" />
+
+                <!-- Nút tạo kỳ thi -->
+                <Button Content="Tạo kỳ thi"
+                        Width="160" Height="38"
+                        Background="#2563eb" Foreground="White"
+                        FontWeight="Bold" FontSize="15"
+                        HorizontalAlignment="Center" Click="Button_Click"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Resource cho DropShadowEffect -->
+        <Grid.Resources>
+            <DropShadowEffect x:Key="DropShadow" BlurRadius="15" ShadowDepth="3" Color="#888" Opacity="0.23"/>
+        </Grid.Resources>
+    </Grid>
+</Window>

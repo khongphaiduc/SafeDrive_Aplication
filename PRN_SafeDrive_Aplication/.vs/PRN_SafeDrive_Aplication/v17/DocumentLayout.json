@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C1890484-D95F-42C4-B013-9437C5F511B2}|PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication.csproj|d:\\project_prn\\safedrive_aplication\\prn_safedrive_aplication\\prn_safedrive_aplication\\police\\createexam.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C1890484-D95F-42C4-B013-9437C5F511B2}|PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication.csproj|solutionrelative:prn_safedrive_aplication\\police\\createexam.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1890484-D95F-42C4-B013-9437C5F511B2}|PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication.csproj|d:\\project_prn\\safedrive_aplication\\prn_safedrive_aplication\\prn_safedrive_aplication\\police\\createexam.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1890484-D95F-42C4-B013-9437C5F511B2}|PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication.csproj|solutionrelative:prn_safedrive_aplication\\police\\createexam.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C1890484-D95F-42C4-B013-9437C5F511B2}|PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication.csproj|d:\\project_prn\\safedrive_aplication\\prn_safedrive_aplication\\prn_safedrive_aplication\\home\\homes.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1890484-D95F-42C4-B013-9437C5F511B2}|PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication.csproj|solutionrelative:prn_safedrive_aplication\\home\\homes.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -143,19 +151,44 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CreateExam.xaml",
+              "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Police\\CreateExam.xaml",
+              "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Police\\CreateExam.xaml",
+              "ToolTip": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Police\\CreateExam.xaml",
+              "RelativeToolTip": "PRN_SafeDrive_Aplication\\Police\\CreateExam.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-08T03:51:25.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateExam.xaml.cs",
+              "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Police\\CreateExam.xaml.cs",
+              "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Police\\CreateExam.xaml.cs",
+              "ToolTip": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Police\\CreateExam.xaml.cs",
+              "RelativeToolTip": "PRN_SafeDrive_Aplication\\Police\\CreateExam.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T03:51:23.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Homes.xaml.cs",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Home\\Homes.xaml.cs",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Home\\Homes.xaml.cs",
               "ToolTip": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Home\\Homes.xaml.cs",
               "RelativeToolTip": "PRN_SafeDrive_Aplication\\Home\\Homes.xaml.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAuwF0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAuwGUAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-07T04:20:45.757Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Homes.xaml",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Home\\Homes.xaml",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Home\\Homes.xaml",
@@ -166,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Home.xaml",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Home\\Home.xaml",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Home\\Home.xaml",
@@ -177,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Login.xaml.cs",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Log\\Login.xaml.cs",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Log\\Login.xaml.cs",
@@ -189,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Login.xaml",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Log\\Login.xaml",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Log\\Login.xaml",
@@ -200,7 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "DisplayListCourseOfTeacher.xaml.cs",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Teacher\\DisplayListCourseOfTeacher.xaml.cs",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Teacher\\DisplayListCourseOfTeacher.xaml.cs",
@@ -208,11 +241,12 @@
               "RelativeToolTip": "PRN_SafeDrive_Aplication\\Teacher\\DisplayListCourseOfTeacher.xaml.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAWwC8AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T04:29:45.879Z"
+              "WhenOpened": "2025-07-07T04:29:45.879Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CreateCourse.xaml.cs",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Teacher\\CreateCourse.xaml.cs",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Teacher\\CreateCourse.xaml.cs",
@@ -224,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Home.xaml.cs",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Home\\Home.xaml.cs",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Home\\Home.xaml.cs",
@@ -236,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "DisplayListAllCourse.xaml.cs",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Police\\DisplayListAllCourse.xaml.cs",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Police\\DisplayListAllCourse.xaml.cs",
@@ -248,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "HomeUserControl.xaml",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Home\\HomeUserControl.xaml",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Home\\HomeUserControl.xaml",
@@ -259,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "ViewCoursesWindow.xaml.cs",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Student\\ViewCoursesWindow.xaml.cs",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Student\\ViewCoursesWindow.xaml.cs",
@@ -271,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "SessionUser.cs",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Models\\SessionUser.cs",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Models\\SessionUser.cs",
@@ -283,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Course.cs",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Models\\Course.cs",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Models\\Course.cs",
@@ -295,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "DisplayListExams.xaml",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Police\\DisplayListExams.xaml",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Police\\DisplayListExams.xaml",
@@ -306,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "ManageCoursesWindow.xaml",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Teacher\\ManageCoursesWindow.xaml",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Teacher\\ManageCoursesWindow.xaml",
@@ -317,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "DisplayListAllCourse.xaml",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Police\\DisplayListAllCourse.xaml",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Police\\DisplayListAllCourse.xaml",
@@ -328,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "DisplayListMemberClass.xaml",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Teacher\\DisplayListMemberClass.xaml",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Teacher\\DisplayListMemberClass.xaml",
@@ -339,18 +373,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "DisplayListCourseOfTeacher.xaml",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Teacher\\DisplayListCourseOfTeacher.xaml",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Teacher\\DisplayListCourseOfTeacher.xaml",
               "ToolTip": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Teacher\\DisplayListCourseOfTeacher.xaml",
               "RelativeToolTip": "PRN_SafeDrive_Aplication\\Teacher\\DisplayListCourseOfTeacher.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-07T04:20:59.747Z"
+              "WhenOpened": "2025-07-07T04:20:59.747Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "CreateCourse.xaml",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Teacher\\CreateCourse.xaml",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Teacher\\CreateCourse.xaml",
@@ -361,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "HomeUserControl.xaml.cs",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Home\\HomeUserControl.xaml.cs",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Home\\HomeUserControl.xaml.cs",
@@ -373,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "DisplayListExams.xaml.cs",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Police\\DisplayListExams.xaml.cs",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Police\\DisplayListExams.xaml.cs",
@@ -385,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\AssemblyInfo.cs",
@@ -397,18 +432,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\App.xaml",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\App.xaml",
               "ToolTip": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\App.xaml",
               "RelativeToolTip": "PRN_SafeDrive_Aplication\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-07T04:18:14.213Z"
+              "WhenOpened": "2025-07-07T04:18:14.213Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "UserLog.cs",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\BLL\\UserLog.cs",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\BLL\\UserLog.cs",
@@ -420,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "ViewCoursesWindow.xaml",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Student\\ViewCoursesWindow.xaml",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Student\\ViewCoursesWindow.xaml",
@@ -431,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "StudentWindow.xaml",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Student\\StudentWindow.xaml",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Student\\StudentWindow.xaml",
@@ -442,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "ManageCoursesWindow.xaml.cs",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Teacher\\ManageCoursesWindow.xaml.cs",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Teacher\\ManageCoursesWindow.xaml.cs",
@@ -454,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "Prn1Context.cs",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Models\\Prn1Context.cs",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Models\\Prn1Context.cs",
@@ -466,7 +502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "RegisterAccount.xaml",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Log\\RegisterAccount.xaml",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Log\\RegisterAccount.xaml",
@@ -477,7 +513,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "StudentWindow.xaml.cs",
               "DocumentMoniker": "D:\\Project_PRN\\SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\PRN_SafeDrive_Aplication\\Student\\StudentWindow.xaml.cs",
               "RelativeDocumentMoniker": "PRN_SafeDrive_Aplication\\Student\\StudentWindow.xaml.cs",

@@ -80,7 +80,7 @@ namespace PRN_SafeDrive_Aplication.Teacher
                 {
                     int IDCourse = s.CourseId; // lấy ID của khóa học mà thằng user vừa chọn
                     var k = new DisplayListMemberClass(IDCourse);
-                    k.Show();
+                    k.ShowDialog();
                 }
                 catch (Exception )
                 {
