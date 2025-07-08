@@ -15,5 +15,6 @@ public partial class Certificate
 
     public string? CertificateCode { get; set; }
 
+    public int CertificateCodeID { get; set; }
     public virtual User User { get; set; } = null!;
 }
