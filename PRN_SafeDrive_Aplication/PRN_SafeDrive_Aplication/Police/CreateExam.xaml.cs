@@ -42,8 +42,8 @@ namespace PRN_SafeDrive_Aplication.Police
         {
             using (Prn1Context mydbcontext = new Prn1Context())
             {
-                var List = from s in mydbcontext.Certificates
-                           select s.CertificateCode;
+                var List = (from  s in mydbcontext.Certificates
+                           select s.CertificateCode).Distinct();
                 return List.ToList();
 
             }
@@ -99,12 +99,12 @@ namespace PRN_SafeDrive_Aplication.Police
 
 
         // lấy ID từ CertificateCode
-        public int GetIDCertificate(string certificateCode)
+        public int GetCodeIDCertificate(string certificateCode)
         {
             using (Prn1Context mydbcontext = new Prn1Context())
             {
                 var certificate = mydbcontext.Certificates.FirstOrDefault(c => c.CertificateCode == certificateCode);
-                return certificate != null ? certificate.CertificateId : -1; // Trả về -1 nếu không tìm thấy
+                return certificate != null ? certificate.CertificateCodeID : -1; // Trả về -1 nếu không tìm thấy
             }
         }
 
@@ -128,7 +128,7 @@ namespace PRN_SafeDrive_Aplication.Police
                         Date = DateOnly.Parse(date),
                         Room = room,
                         Status = "Pending",
-                        IDCertificates = GetIDCertificate(IDCertificates)
+                        IDCertificates = GetCodeIDCertificate(IDCertificates)
                     });
 
                     mydbcontext.SaveChanges();

@@ -1,6 +1,8 @@
-﻿using Microsoft.Identity.Client;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using PRN_SafeDrive_Aplication.Models;
 using PRN_SafeDrive_Aplication.MyModels;
+using PRN_SafeDrive_Aplication.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -97,6 +99,53 @@ namespace PRN_SafeDrive_Aplication.Police
             }
         }
 
+        public async Task SendResultExam(int IDExam)
+        {
+            try
+            {
+                using (var dbcontext = new Prn1Context())
+                {
+                    var results = (from a in dbcontext.Exams
+                                   join b in dbcontext.Results on a.ExamId equals b.ExamId
+                                   join c in dbcontext.Users on b.UserId equals c.UserId
+                                   where a.ExamId == IDExam
+                                   select new NotificationResultExam
+                                   {
+                                       Email = c.Email,
+                                       FullName = c.FullName,
+                                       Score = b.Score.ToString(),
+                                       Statue = b.PassStatus ? "Passed" : "Failed"
+                                   }).ToList();
+
+                    foreach (var item in results)
+                    {
+                        string subject;
+                        string body;
+
+                        if (item.Statue == "Passed")
+                        {
+                            subject = "Congratulation to You";
+                            body = $"Bạn đã Pass Chứng Chỉ với điểm số là {item.Score}";
+                        }
+                        else
+                        {
+                            subject = "Result of You";
+                            body = $"We regret to inform you that you did not pass the exam this time. Your current score is {item.Score}, and we encourage you to try again in the future.";
+                        }
+
+                        await MyResendEmail.SendGmailAsyncs(item.Email, subject, body);
+                        await Task.Delay(1000); 
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                
+                throw;
+            }
+        }
+
+
         private void EndExam(object sender, RoutedEventArgs e)
         {
             try
@@ -114,13 +163,12 @@ namespace PRN_SafeDrive_Aplication.Police
                         s.Status = "Ended"; // cập nhật trạng thái kỳ thi là đã kết thúc 
                         dbcontext.SaveChanges();
                         MessageBox.Show("Kỳ thi đã kết thúc thành công");
+                        _=SendResultExam(_IDExam); // gọi hàm gửi kết quả thi cho học sinh
                         this.Close(); 
                     }
                     else
                     {
                         MessageBox.Show("Không tìm thấy kỳ thi với ID đã cho.");
-
-
                     }
 
                 }
