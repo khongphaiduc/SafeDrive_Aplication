@@ -40,7 +40,7 @@ namespace PRN_SafeDrive_Aplication.BiLL
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             StudentWindow s = new();
-            s.ShowDialog();
+            //s.ShowDialog();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

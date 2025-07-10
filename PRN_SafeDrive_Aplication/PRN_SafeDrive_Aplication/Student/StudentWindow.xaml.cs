@@ -1,10 +1,11 @@
 ﻿using PRN_SafeDrive_Aplication.Models;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace PRN_SafeDrive_Aplication.Student
 {
-    public partial class StudentWindow : Window
+    public partial class StudentWindow : UserControl
     {
         private readonly Prn1Context _context;
         private User currentUser;
@@ -104,7 +105,7 @@ namespace PRN_SafeDrive_Aplication.Student
 
         private void btnHuy_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+
         }
     }
 }
