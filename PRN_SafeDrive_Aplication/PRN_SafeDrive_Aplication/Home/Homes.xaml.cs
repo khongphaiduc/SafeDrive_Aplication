@@ -17,6 +17,7 @@ using PRN_SafeDrive_Aplication.Police;
 using PRN_SafeDrive_Aplication.Student;
 using PRN_SafeDrive_Aplication.Teacher;
 
+
 namespace PRN_SafeDrive_Aplication.BiLL
 {
     /// <summary>
@@ -71,6 +72,7 @@ namespace PRN_SafeDrive_Aplication.BiLL
         {
             MainContent.Content = new StudentWindow();
 
+
         }
 
 
@@ -122,6 +124,11 @@ namespace PRN_SafeDrive_Aplication.BiLL
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new CourseListControl();
         }
     }
 }

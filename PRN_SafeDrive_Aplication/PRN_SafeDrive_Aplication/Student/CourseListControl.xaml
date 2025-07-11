@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="PRN_SafeDrive_Aplication.Student.CourseListControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:PRN_SafeDrive_Aplication.Student"
+             mc:Ignorable="d"
+             Background="#F8FAFF">
+
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2.1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- LEFT: Danh sách khóa học -->
+        <Border CornerRadius="10" Background="White" Padding="20" Margin="0 0 10 0">
+            <StackPanel>
+                <TextBlock Text="Khóa học đã tham gia" FontSize="18" FontWeight="Bold" Foreground="#2563eb" Margin="0 0 0 15"/>
+                <ListBox x:Name="CourseListBox"
+                         ItemsSource="{Binding Courses}"
+                         DisplayMemberPath="CourseName"
+                         SelectedItem="{Binding SelectedCourse, Mode=TwoWay}"
+                         BorderThickness="0"
+                         Background="#f0f4ff"
+                         FontSize="14"/>
+            </StackPanel>
+        </Border>
+
+        <!-- RIGHT: Chi tiết khóa học -->
+        <Border Grid.Column="1"
+                Background="#f8fbff"
+                Padding="20"
+                CornerRadius="10">
+            <StackPanel>
+                <TextBlock Text="Thông tin chi tiết" FontSize="18" FontWeight="Bold" Foreground="#2563eb" Margin="0 0 0 15"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Text="Giáo viên: " FontWeight="SemiBold" Width="100"/>
+                    <TextBlock Text="{Binding SelectedCourse.TeacherID}" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Text="Ngày bắt đầu: " FontWeight="SemiBold" Width="100"/>
+                    <TextBlock Text="{Binding SelectedCourse.StartDate, StringFormat='dd/MM/yyyy'}" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Text="Ngày kết thúc: " FontWeight="SemiBold" Width="100"/>
+                    <TextBlock Text="{Binding SelectedCourse.EndDate, StringFormat='dd/MM/yyyy'}" />
+                </StackPanel>
+
+                <StackPanel Margin="0 0 0 10">
+                    <TextBlock Text="Mô tả khóa học" FontWeight="SemiBold" Margin="0 5 0 3"/>
+                    <TextBox Text="{Binding SelectedCourse.ContentCourse}" 
+                             IsReadOnly="True" 
+                             TextWrapping="Wrap" 
+                             Background="#eef2ff"
+                             BorderBrush="#d1d5db" 
+                             Height="100"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>
