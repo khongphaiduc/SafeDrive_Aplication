@@ -1,10 +1,11 @@
 ﻿using PRN_SafeDrive_Aplication.Models;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace PRN_SafeDrive_Aplication.Student
 {
-    public partial class StudentWindow : Window
+    public partial class StudentWindow : UserControl
     {
         private readonly Prn1Context _context;
         private User currentUser;
@@ -16,6 +17,7 @@ namespace PRN_SafeDrive_Aplication.Student
 
             // Lấy email từ SessionUser
             string email = SessionUser.Email;
+
             currentUser = _context.Users.FirstOrDefault(u => u.Email == email);
 
             if (currentUser != null)
@@ -103,7 +105,7 @@ namespace PRN_SafeDrive_Aplication.Student
 
         private void btnHuy_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+
         }
     }
 }
