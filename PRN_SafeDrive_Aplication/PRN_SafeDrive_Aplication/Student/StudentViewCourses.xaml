@@ -1,0 +1,143 @@
+﻿<UserControl x:Class="PRN_SafeDrive_Aplication.Student.StudentViewCourses"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="#f4f6f9">
+    <UserControl.Resources>
+        <!-- Style cho card khóa học -->
+        <Style x:Key="CourseCardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Gray" BlurRadius="8" ShadowDepth="2" Opacity="0.3"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style cho nút xem chi tiết -->
+        <Style x:Key="ViewDetailButton" TargetType="Button">
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Background" Value="#3498db"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#2980b9"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Style cho nút quay lại -->
+        <Style x:Key="BackButton" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="MinWidth" Value="120"/>
+            <Setter Property="Background" Value="#95a5a6"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#7f8c8d"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Thanh tìm kiếm -->
+        <StackPanel Orientation="Horizontal" Margin="20,10,20,10" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Right" >
+            <TextBox x:Name="SearchCourseNameTextBox" Width="220" Margin="0,0,10,0" Height="32" VerticalContentAlignment="Center" FontSize="14" Text="Tìm kiếm với tên khóa học" Foreground="#888" GotFocus="SearchCourseNameTextBox_GotFocus" LostFocus="SearchCourseNameTextBox_LostFocus" />
+            <TextBox x:Name="SearchTeacherNameTextBox" Width="180" Margin="0,0,10,0" Height="32" VerticalContentAlignment="Center" FontSize="14" Text="Tìm kiếm với tên giảng viên" Foreground="#888" GotFocus="SearchTeacherNameTextBox_GotFocus" LostFocus="SearchTeacherNameTextBox_LostFocus" />
+            <Button Content="🔍 Tìm kiếm" Width="100" Height="32" Click="SearchButton_Click" Style="{StaticResource ViewDetailButton}"/>
+        </StackPanel>
+
+        <!-- Header -->
+        <Border Grid.Row="1" Background="White" Padding="20" Margin="10,0,10,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Tiêu đề -->
+                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                    <TextBlock Text="📚 Danh Sách Khóa Học Của Tôi" FontSize="24" FontWeight="Bold" Foreground="#2c3e50"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Danh sách khóa học -->
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+            <ItemsControl x:Name="CoursesItemsControl">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Style="{StaticResource CourseCardStyle}" Cursor="Hand">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Text="{Binding CourseName}" FontSize="18" FontWeight="Bold" Foreground="#2c3e50" Margin="0,0,0,10"/>
+                                    <TextBlock Text="{Binding ContentCourse, FallbackValue='Nội dung khóa học sẽ được cập nhật sớm'}" FontSize="14" Foreground="#7f8c8d" TextWrapping="Wrap" MaxHeight="60" Margin="0,0,0,10"/>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                                        <TextBlock Text="👨‍🏫 Giảng viên: " FontSize="12" Foreground="#34495e"/>
+                                        <TextBlock Text="{Binding Teacher.FullName}" FontSize="12" Foreground="#2980b9" FontWeight="SemiBold"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                                        <TextBlock Text="📅 Thời gian: " FontSize="12" Foreground="#34495e"/>
+                                        <TextBlock Text="{Binding StartDate, StringFormat='{}{0:dd/MM/yyyy}', FallbackValue='TBA'}" FontSize="12" Foreground="#27ae60"/>
+                                        <TextBlock Text=" - " FontSize="12" Foreground="#34495e"/>
+                                        <TextBlock Text="{Binding EndDate, StringFormat='{}{0:dd/MM/yyyy}', FallbackValue='TBA'}" FontSize="12" Foreground="#27ae60"/>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <Button Grid.Column="1" 
+                                    Content="Xem Chi Tiết" 
+                                    Style="{StaticResource ViewDetailButton}"
+                                    Width="120"
+                                    Click="ViewDetailButton_Click"
+                                    Tag="{Binding CourseId}"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

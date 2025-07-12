@@ -151,19 +151,47 @@ namespace PRN_SafeDrive_Aplication.BiLL
             MainContent.Content = courseDetailControl;
         }
 
+        private void CourseListControl_CourseSelected2(object? sender, int courseId)
+        {
+            // Hiển thị chi tiết khóa học khi bấm khóa học của tôi
+            var courseDetailControl = new CourseDetailUserControl();
+            courseDetailControl.BackRequested += CourseDetailControl_BackRequested2;
+            courseDetailControl.LoadCourseDetail(courseId);
+            MainContent.Content = courseDetailControl;
+        }
+
         private void CourseDetailControl_BackRequested(object? sender, EventArgs e)
         {
-            // Quay lại danh sách khóa học
+            // Quay lại danh sách khóa học 
             var courseListControl = new CourseListUserControl();
             courseListControl.CourseSelected += CourseListControl_CourseSelected;
             MainContent.Content = courseListControl;
         }
 
-        
+        private void CourseDetailControl_BackRequested2(object? sender, EventArgs e)
+        {
+            // Quay lại danh sách khóa học khi bấm khóa học của tôi
+            var courseListControl = new StudentViewCourses();
+            courseListControl.CourseSelected += CourseListControl_CourseSelected2;
+            MainContent.Content = courseListControl;
+        }
+
+
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new CourseListControl();
+            if (SessionUser.Role.Equals("Student"))
+            {
+                // Hiển thị danh sách khóa học cho student
+                var courseListControl = new StudentViewCourses();
+                courseListControl.CourseSelected += CourseListControl_CourseSelected2;
+                MainContent.Content = courseListControl;
+            }
+            else
+            {
+                ManageCoursesWindow m = new();
+                m.ShowDialog();
+            }
         }
 
     }
