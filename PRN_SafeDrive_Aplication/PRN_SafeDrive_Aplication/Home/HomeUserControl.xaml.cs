@@ -23,6 +23,7 @@ namespace PRN_SafeDrive_Aplication.Home
         public HomeUserControl()
         {
             InitializeComponent();
+
         }
     }
 }
