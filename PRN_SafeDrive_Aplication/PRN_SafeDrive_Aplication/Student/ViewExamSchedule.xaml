@@ -1,0 +1,118 @@
+﻿<UserControl x:Class="PRN_SafeDrive_Aplication.Student.ViewExamSchedule"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="1000">
+
+    <Grid Background="#F0F4F8">
+        <Border Background="White"
+                CornerRadius="12"
+                Padding="20"
+                BorderBrush="#DADCE0"
+                BorderThickness="1"
+                >
+            <StackPanel>
+                <!-- Title -->
+                <TextBlock Text="📚 Thông Tin Học Tập"
+                           FontSize="28"
+                           FontWeight="Bold"
+                           Foreground="#2B2D42"
+                           Margin="0 0 0 25"/>
+
+                <!-- Tab Control -->
+                <TabControl Background="Transparent"
+                            FontFamily="Segoe UI"
+                            FontSize="15"
+                            BorderThickness="0"
+                            Padding="0"
+                            Margin="0">
+                    <!-- Tab: Lịch học -->
+                    <TabItem Header="🟦 Lịch học">
+                        <Border Background="#E3F2FD"
+                                CornerRadius="8"
+                                Padding="10"
+                                Margin="10"
+                                BorderBrush="#90CAF9"
+                                BorderThickness="1">
+                            <DataGrid x:Name="dgCourses"
+                                      AutoGenerateColumns="False"
+                                      CanUserAddRows="False"
+                                      IsReadOnly="True"
+                                      HeadersVisibility="Column"
+                                      GridLinesVisibility="None"
+                                      RowBackground="#FFFFFF"
+                                      AlternatingRowBackground="#BBDEFB"
+                                      ColumnHeaderHeight="35"
+                                      RowHeight="35"
+                                      BorderThickness="0"
+                                      FontSize="14">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="📖 Tên Khóa Học" Binding="{Binding CourseName}" Width="*" />
+                                    <DataGridTextColumn Header="📅 Ngày Bắt Đầu" Binding="{Binding StartDate}" Width="150" />
+                                    <DataGridTextColumn Header="📅 Ngày Kết Thúc" Binding="{Binding EndDate}" Width="150" />
+                                    <DataGridTextColumn Header="📌 Nội Dung" Binding="{Binding ContentCourse}" Width="200" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Border>
+                    </TabItem>
+
+                    <!-- Tab: Lịch thi -->
+                    <TabItem Header="🟩 Lịch thi">
+                        <Border Background="#E8F5E9"
+                                CornerRadius="8"
+                                Padding="10"
+                                Margin="10"
+                                BorderBrush="#A5D6A7"
+                                BorderThickness="1">
+                            <DataGrid x:Name="dgExams"
+                                      AutoGenerateColumns="False"
+                                      CanUserAddRows="False"
+                                      IsReadOnly="True"
+                                      RowBackground="#FFFFFF"
+                                      AlternatingRowBackground="#C8E6C9"
+                                      ColumnHeaderHeight="35"
+                                      RowHeight="35"
+                                      BorderThickness="0"
+                                      FontSize="14">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="📖 Khóa Học" Binding="{Binding CourseName}" Width="*" />
+                                    <DataGridTextColumn Header="📅 Ngày Thi" Binding="{Binding ExamDate}" Width="150" />
+                                    <DataGridTextColumn Header="🏫 Phòng Thi" Binding="{Binding Room}" Width="150" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Border>
+                    </TabItem>
+
+                    <!-- Tab: Kết quả -->
+                    <TabItem Header="🟥 Kết quả thi">
+                        <Border Background="#FFEBEE"
+                                CornerRadius="8"
+                                Padding="10"
+                                Margin="10"
+                                BorderBrush="#EF9A9A"
+                                BorderThickness="1">
+                            <DataGrid x:Name="dgResults"
+                                      AutoGenerateColumns="False"
+                                      CanUserAddRows="False"
+                                      IsReadOnly="True"
+                                      RowBackground="#FFFFFF"
+                                      AlternatingRowBackground="#FFCDD2"
+                                      ColumnHeaderHeight="35"
+                                      RowHeight="35"
+                                      BorderThickness="0"
+                                      FontSize="14">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="📖 Khóa Học" Binding="{Binding CourseName}" Width="*" />
+                                    <DataGridTextColumn Header="📈 Điểm" Binding="{Binding Score}" Width="100" />
+                                    <DataGridTextColumn Header="✅ Trạng Thái" Binding="{Binding PassStatus}" Width="150" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Border>
+                    </TabItem>
+                </TabControl>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>
