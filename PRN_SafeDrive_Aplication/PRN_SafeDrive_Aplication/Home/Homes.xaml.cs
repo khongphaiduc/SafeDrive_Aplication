@@ -194,5 +194,9 @@ namespace PRN_SafeDrive_Aplication.BiLL
             }
         }
 
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new ViewExamSchedule(SessionUser.Email);
+        }
     }
 }
