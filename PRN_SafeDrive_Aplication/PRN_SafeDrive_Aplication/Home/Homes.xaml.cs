@@ -198,5 +198,10 @@ namespace PRN_SafeDrive_Aplication.BiLL
         {
             MainContent.Content = new ViewExamSchedule(SessionUser.Email);
         }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new StudentCertificates();
+        }
     }
 }
