@@ -1,3 +1,4 @@
+
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using PRN_SafeDrive_Aplication.Models;
@@ -184,3 +185,4 @@ namespace PRN_SafeDrive_Aplication.Police
 
     }
 }
+

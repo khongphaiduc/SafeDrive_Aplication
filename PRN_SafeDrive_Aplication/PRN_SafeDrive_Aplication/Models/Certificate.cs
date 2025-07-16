@@ -9,9 +9,9 @@ public partial class Certificate
 
     public int UserId { get; set; }
 
-    public DateOnly IssuedDate { get; set; }
+    public DateOnly? IssuedDate { get; set; }
 
-    public DateOnly ExpirationDate { get; set; }
+    public DateOnly? ExpirationDate { get; set; }
 
     public string? CertificateCode { get; set; }
 
