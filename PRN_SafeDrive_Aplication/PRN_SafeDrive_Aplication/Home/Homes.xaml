@@ -1,15 +1,11 @@
-﻿<Window x:Class="PRN_SafeDrive_Aplication.BiLL.Homes"
+<Window x:Class="PRN_SafeDrive_Aplication.BiLL.Homes"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="SafeDrive Dashboard" Height="804" Width="1581" Background="#f4f6f9"
         Loaded="Window_Loaded"
         WindowStartupLocation="CenterScreen">
 
-
-
     <Window.Resources>
-
-
 
         <!-- Style cho các card chức năng -->
         <Style x:Key="CardStyle" TargetType="Border">
