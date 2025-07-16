@@ -71,8 +71,6 @@ namespace PRN_SafeDrive_Aplication.BiLL
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             MainContent.Content = new StudentWindow();
-
-
         }
 
 
