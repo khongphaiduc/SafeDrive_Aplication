@@ -1,3 +1,4 @@
+
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using PRN_SafeDrive_Aplication.Models;
@@ -180,9 +181,8 @@ namespace PRN_SafeDrive_Aplication.Police
             }
         }
       
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close(); 
-        }
+        private void Button_Click(object sender, RoutedEventArgs e) => this.Close(); 
+
     }
 }
+

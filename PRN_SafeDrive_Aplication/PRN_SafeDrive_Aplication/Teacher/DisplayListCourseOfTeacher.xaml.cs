@@ -1,3 +1,4 @@
+
 ﻿using PRN_SafeDrive_Aplication.Models;
 using PRN_SafeDrive_Aplication.MyModels;
 using System;
@@ -38,7 +39,7 @@ namespace PRN_SafeDrive_Aplication.Teacher
                 var list = (
                     from c in mydbcontext.Courses
                     join u in mydbcontext.Users on c.TeacherId equals u.UserId
-                    where c.TeacherId == SessionUser.UserId // Lọc khóa học theo ID giáo viên hiện tại
+                    where c.TeacherId == getIDUser(SessionUser.Email)  // Lọc khóa học theo ID giáo viên hiện tại
                     select new MCourse
                     {
                         CourseId = c.CourseId,
@@ -48,12 +49,14 @@ namespace PRN_SafeDrive_Aplication.Teacher
                         DateStart = c.StartDate.ToString("dd/MM/yyyy"),
                         DateEnd = c.EndDate.ToString("dd/MM/yyyy")
                     }).ToList();
+
+           
                 return list;
             }
         }
 
 
-
+        
 
 
 
@@ -93,5 +96,33 @@ namespace PRN_SafeDrive_Aplication.Teacher
 
 
         }
+
+
+        // hàm này dùng để lấy ID của user từ email
+        public int getIDUser(string mail)
+        {
+            try
+            {
+                using (var dbcontext = new Prn1Context())
+                {
+
+                    var user = dbcontext.Users.FirstOrDefault(u => u.Email == mail);
+
+                    if(user == null)
+                    {
+                        return 0;
+                    }
+
+                    return user.UserId; 
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Đéo hiểu sao lại lỗi : "+ex.Message);
+                throw;
+            }
+        }
+
+
     }
 }
