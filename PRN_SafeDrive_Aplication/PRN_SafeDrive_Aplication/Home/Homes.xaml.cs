@@ -84,7 +84,8 @@ namespace PRN_SafeDrive_Aplication.BiLL
         // hiện thị tất cả khóa học của teacher 
         private void DisplayCourseOfTeacher(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new DisplayListCourseOfTeacher();
+            //MainContent.Content = new DisplayListCourseOfTeacher();
+            MainContent.Content = new ManageCoursesWindow();
         }
 
 
@@ -136,7 +137,7 @@ namespace PRN_SafeDrive_Aplication.BiLL
             else
             {
                 ManageCoursesWindow m = new();
-                m.ShowDialog();
+               // m.ShowDialog();
             }
         }
 
@@ -188,7 +189,7 @@ namespace PRN_SafeDrive_Aplication.BiLL
             else
             {
                 ManageCoursesWindow m = new();
-                m.ShowDialog();
+               // m.ShowDialog();
             }
         }
 

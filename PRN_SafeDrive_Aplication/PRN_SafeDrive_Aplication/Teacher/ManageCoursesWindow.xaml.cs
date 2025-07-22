@@ -6,7 +6,7 @@ using PRN_SafeDrive_Aplication.Models;
 
 namespace PRN_SafeDrive_Aplication.Teacher
 {
-    public partial class ManageCoursesWindow : Window
+    public partial class ManageCoursesWindow : UserControl
     {
         private Prn1Context _context;
         private int _teacherId;
@@ -21,12 +21,6 @@ namespace PRN_SafeDrive_Aplication.Teacher
             Console.WriteLine($"Bên đại ca đức anh {SessionUser.Email}");
             // Tìm giáo viên theo email
             var teacher = _context.Users.FirstOrDefault(u => u.Email == teacherEmail && u.Role == "Teacher");
-            if (teacher == null)
-            {
-                MessageBox.Show("Không tìm thấy thông tin giáo viên.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
-                this.Close();
-                return;
-            }
             _teacherId = teacher.UserId;
 
             // Lấy danh sách các khóa học mà giáo viên này phụ trách
