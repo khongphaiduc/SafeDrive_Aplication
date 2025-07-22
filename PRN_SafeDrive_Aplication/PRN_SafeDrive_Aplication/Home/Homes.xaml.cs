@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using PRN_SafeDrive_Aplication.Home;
+using PRN_SafeDrive_Aplication.Log;
 using PRN_SafeDrive_Aplication.Models;
 using PRN_SafeDrive_Aplication.Police;
 using PRN_SafeDrive_Aplication.Student;
@@ -65,7 +66,7 @@ namespace PRN_SafeDrive_Aplication.BiLL
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             StudentWindow s = new();
-            
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -201,6 +202,18 @@ namespace PRN_SafeDrive_Aplication.BiLL
         private void Button_Click_7(object sender, RoutedEventArgs e)
         {
             MainContent.Content = new StudentCertificates();
+        }
+
+  
+
+        private void LogOutMethod(object sender, RoutedEventArgs e)
+        {
+            SessionUser.Email = string.Empty;
+            SessionUser.Role = string.Empty;
+            SessionUser.UserId = 0;
+            Login loginWindow = new Login();
+            this.Close(); // Đóng cửa sổ hiện tại
+            loginWindow.ShowDialog();
         }
 
         private void Button_Click_8(object sender, RoutedEventArgs e)
