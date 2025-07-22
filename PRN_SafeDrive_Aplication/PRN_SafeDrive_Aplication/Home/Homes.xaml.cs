@@ -72,8 +72,6 @@ namespace PRN_SafeDrive_Aplication.BiLL
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             MainContent.Content = new StudentWindow();
-
-
         }
 
 
@@ -87,7 +85,8 @@ namespace PRN_SafeDrive_Aplication.BiLL
         // hiện thị tất cả khóa học của teacher 
         private void DisplayCourseOfTeacher(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new DisplayListCourseOfTeacher();
+            //MainContent.Content = new DisplayListCourseOfTeacher();
+            MainContent.Content = new ManageCoursesWindow();
         }
 
 
@@ -139,7 +138,7 @@ namespace PRN_SafeDrive_Aplication.BiLL
             else
             {
                 ManageCoursesWindow m = new();
-                m.ShowDialog();
+               // m.ShowDialog();
             }
         }
 
@@ -191,7 +190,7 @@ namespace PRN_SafeDrive_Aplication.BiLL
             else
             {
                 ManageCoursesWindow m = new();
-                m.ShowDialog();
+               // m.ShowDialog();
             }
         }
 
@@ -217,7 +216,14 @@ namespace PRN_SafeDrive_Aplication.BiLL
             loginWindow.ShowDialog();
         }
 
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new ViewAllScores();
+        }
 
-
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new CertificateListView();
+        }
     }
 }
