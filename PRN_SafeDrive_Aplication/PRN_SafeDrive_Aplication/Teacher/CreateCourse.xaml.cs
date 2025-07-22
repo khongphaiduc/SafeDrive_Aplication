@@ -62,7 +62,7 @@ namespace PRN_SafeDrive_Aplication.Teacher
                     ContentCourse = contentCourse,
                     StartDate = DateOnly.FromDateTime((DateTime)startDate),
                     EndDate =DateOnly.FromDateTime((DateTime)endDate),
-                    TeacherId = SessionUser.UserId // Lấy ID giáo viên từ SessionUser
+                    TeacherId = getIDUser(SessionUser.Email) // Lấy ID giáo viên từ SessionUser
                 });
                 row =  dbcontext.SaveChanges();
                
@@ -72,6 +72,31 @@ namespace PRN_SafeDrive_Aplication.Teacher
                                : MessageBox.Show("Tạo khóa học thất bại.", "Thông báo đến bạn", MessageBoxButton.OK, MessageBoxImage.Error);
 
 
+        }
+
+
+        public int getIDUser(string mail)
+        {
+            try
+            {
+                using (var dbcontext = new Prn1Context())
+                {
+
+                    var user = dbcontext.Users.FirstOrDefault(u => u.Email == mail);
+
+                    if (user == null)
+                    {
+                        return 0;
+                    }
+
+                    return user.UserId;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Đéo hiểu sao lại lỗi : " + ex.Message);
+                throw;
+            }
         }
     }
 }

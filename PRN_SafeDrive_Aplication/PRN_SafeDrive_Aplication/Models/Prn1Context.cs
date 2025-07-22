@@ -35,7 +35,11 @@ public partial class Prn1Context : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("URL_SQL_SafeDrive"));
+        //optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("URL_SQL_SafeDrive"));
+
+        string pathSL = "Data Source=PHAMTRUNGDUC\\SQLEXPRESS;Initial Catalog=PR1;Persist Security Info=True;User ID=sa;Password=123;Trust Server Certificate=True";
+        optionsBuilder.UseSqlServer(pathSL);
+
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
