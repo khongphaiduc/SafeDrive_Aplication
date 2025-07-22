@@ -32,20 +32,20 @@
 
                 <TextBlock Grid.Row="1" Grid.Column="0" Text="Họ và tên:" FontWeight="Bold" Foreground="#2563EB" Margin="0,0,8,6"/>
                 <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding FullName}" Foreground="#334155" Margin="0,0,0,6"/>
-                <TextBlock Grid.Row="1" Grid.Column="2" Text="Lớp:" FontWeight="Bold" Foreground="#2563EB" Margin="0,0,8,6"/>
-                <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding Class}" Foreground="#334155" Margin="0,0,0,6"/>
+                <TextBlock x:Name="tblClass" Grid.Row="1" Grid.Column="2" Text="Lớp:" FontWeight="Bold" Foreground="#2563EB" Margin="0,0,8,6"/>
+                <TextBlock x:Name="tblClass2" Grid.Row="1" Grid.Column="3" Text="{Binding Class}" Foreground="#334155" Margin="0,0,0,6"/>
 
-                <TextBlock Grid.Row="2" Grid.Column="0" Text="Trường:" FontWeight="Bold" Foreground="#2563EB" Margin="0,0,8,0"/>
-                <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding School}" Foreground="#334155" Margin="0,0,0,0"/>
+                <TextBlock x:Name="tblSchool" Grid.Row="2" Grid.Column="0" Text="Trường:" FontWeight="Bold" Foreground="#2563EB" Margin="0,0,8,0"/>
+                <TextBlock x:Name="tblSchool2" Grid.Row="2" Grid.Column="1" Text="{Binding School}" Foreground="#334155" Margin="0,0,0,0"/>
                 <TextBlock Grid.Row="2" Grid.Column="2" Text="Số ĐT:" FontWeight="Bold" Foreground="#2563EB" Margin="0,0,8,0"/>
                 <TextBlock Grid.Row="2" Grid.Column="3" Text="{Binding Phone}" Foreground="#334155" Margin="0,0,0,0"/>
             </Grid>
         </Border>
 
         <!-- TIÊU ĐỀ PHẦN CHỈNH SỬA -->
-        <TextBlock Grid.Row="1" Text="Chỉnh sửa thông tin cá nhân" 
+        <Label x:Name="InformationLabelMode" Content="Chỉnh sửa thông tin cá nhân" 
                    FontSize="18" FontWeight="Bold" Foreground="#2563EB" 
-                   HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,6"/>
+                   HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,99,0,0" Grid.RowSpan="3"/>
 
         <!-- FORM CHỈNH SỬA -->
         <Border Grid.Row="2" CornerRadius="12" Background="White" Padding="24" BorderBrush="#E2E8F0" BorderThickness="1">
@@ -72,18 +72,8 @@
                          FontSize="15" BorderBrush="#CBD5E1" BorderThickness="1"
                          Background="#F1F5F9" 
                          VerticalContentAlignment="Center"/>
-                <!--
-                <TextBlock Grid.Row="1" Grid.Column="0" Text="Email:"
-                           Foreground="#334155" FontWeight="SemiBold" FontSize="15"
-                           VerticalAlignment="Center" Margin="0,0,10,16"/>
-                <TextBox Grid.Row="1" Grid.Column="1" Name="txtEmail"
-                         Margin="0,0,0,16"
-                         Height="34" Padding="10,0"
-                         FontSize="15" BorderBrush="#CBD5E1" BorderThickness="1"
-                         Background="#F1F5F9"
-                         VerticalContentAlignment="Center"/>-->
 
-                <TextBlock Grid.Row="2" Grid.Column="0" Text="Lớp:"
+                <TextBlock x:Name="tblLop" Grid.Row="2" Grid.Column="0" Text="Lớp:"
                            Foreground="#334155" FontWeight="SemiBold" FontSize="15"
                            VerticalAlignment="Center" Margin="0,0,10,16"/>
                 <TextBox Grid.Row="2" Grid.Column="1" Name="txtLop"
@@ -91,9 +81,9 @@
                          Height="34" Padding="10,0"
                          FontSize="15" BorderBrush="#CBD5E1" BorderThickness="1"
                          Background="#F1F5F9"
-                         VerticalContentAlignment="Center"/>
+                         VerticalContentAlignment="Center" />
 
-                <TextBlock Grid.Row="3" Grid.Column="0" Text="Trường:"
+                <TextBlock x:Name="tblTruong" Grid.Row="3" Grid.Column="0" Text="Trường:"
                            Foreground="#334155" FontWeight="SemiBold" FontSize="15"
                            VerticalAlignment="Center" Margin="0,0,10,16"/>
                 <TextBox Grid.Row="3" Grid.Column="1" Name="txtTruong"
@@ -121,14 +111,7 @@
                             FontWeight="SemiBold" FontSize="15"
                             BorderThickness="0"
                             Cursor="Hand"
-                            Click="btnLuu_Click"/>      
-                    <Button x:Name="btnHuy"
-                            Width="90" Height="38"
-                            Content="✖  Hủy"
-                            Background="#F1F5F9" Foreground="#334155"
-                            FontWeight="SemiBold" FontSize="15"
-                            BorderBrush="#CBD5E1" BorderThickness="1"
-                            Cursor="Hand" Margin="12,0,0,0" Click="btnHuy_Click"/>
+                            Click="btnLuu_Click"/>
                 </StackPanel>
             </Grid>
         </Border>
