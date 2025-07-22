@@ -4,28 +4,35 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PRN_SafeDrive_Aplication.Police"
-              mc:Ignorable="d"
-             d:DesignWidth="900" d:DesignHeight="743">
+             mc:Ignorable="d"
+             d:DesignWidth="900" d:DesignHeight="743"
+             SnapsToDevicePixels="True"
+             UseLayoutRounding="True">
     <Grid Background="#F6F8FB">
+        <Grid.Resources>
+            <DropShadowEffect x:Key="DropShadow" BlurRadius="10" ShadowDepth="2" Color="#888" Opacity="0.12" />
+        </Grid.Resources>
+
         <Border Background="White"
                 CornerRadius="16"
                 Padding="24"
                 Margin="32"
-                Effect="{DynamicResource DropShadow}">
+                Effect="{StaticResource DropShadow}">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0"
                            Text="DANH SÁCH CHỨNG CHỈ"
                            FontWeight="Bold"
                            FontSize="26"
-                           Margin="0 0 0 24"
+                           Margin="0 0 0 20"
                            Foreground="#304FFE"
-                           HorizontalAlignment="Center"/>
+                           HorizontalAlignment="Center"
+                           SnapsToDevicePixels="True"
+                           TextOptions.TextFormattingMode="Display"/>
 
                 <DataGrid x:Name="dgCertificates"
                           Grid.Row="1"
@@ -41,8 +48,11 @@
                           BorderThickness="0"
                           Background="White"
                           Foreground="#222"
-                          Width="1200"
-                          Margin="10,0,0,10">
+                          HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch"
+                          Margin="0"
+                          SnapsToDevicePixels="True"
+                          UseLayoutRounding="True">
                     <DataGrid.Resources>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#E3E7ED"/>
@@ -74,19 +84,14 @@
                     </DataGrid.Resources>
 
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Học viên" Binding="{Binding StudentName}" Width="200"/>
-                        <DataGridTextColumn Header="Mã chứng chỉ" Binding="{Binding CertificateCode}" Width="180"/>
-                        <DataGridTextColumn Header="Ngày cấp" Binding="{Binding IssuedDate}" Width="150"/>
-                        <DataGridTextColumn Header="Ngày hết hạn" Binding="{Binding ExpirationDate}" Width="150"/>
+                        <DataGridTextColumn Header="Học viên" Binding="{Binding StudentName}" Width="*"/>
+                        <DataGridTextColumn Header="Mã chứng chỉ" Binding="{Binding CertificateCode}" Width="*"/>
+                        <DataGridTextColumn Header="Ngày cấp" Binding="{Binding IssuedDate}" Width="120"/>
+                        <DataGridTextColumn Header="Ngày hết hạn" Binding="{Binding ExpirationDate}" Width="120"/>
                         <DataGridTextColumn Header="Mã định danh" Binding="{Binding CertificateCodeID}" Width="150"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
         </Border>
-
-        <!-- Đổ bóng -->
-        <Grid.Resources>
-            <DropShadowEffect x:Key="DropShadow" BlurRadius="10" ShadowDepth="2" Color="#888" Opacity="0.12" />
-        </Grid.Resources>
     </Grid>
 </UserControl>

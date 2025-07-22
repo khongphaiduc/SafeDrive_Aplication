@@ -11,31 +11,28 @@ namespace PRN_SafeDrive_Aplication.Police
     {
         private readonly Prn1Context _context;
         public ViewAllScores()
-        {
-            InitializeComponent();
+    {
+        InitializeComponent();
+        _context = new Prn1Context();
+        LoadScores();
+    }
 
-            // Khởi tạo DbContext (nên dùng Dependency Injection trong thực tế)
-            _context = new Prn1Context();
+    private void LoadScores()
+    {
+        var scores = (from result in _context.Results
+                      join exam in _context.Exams on result.ExamId equals exam.ExamId
+                      join course in _context.Courses on exam.CourseId equals course.CourseId
+                      join user in _context.Users on result.UserId equals user.UserId
+                      select new StudentScoreDTO
+                      {
+                          StudentName = user.FullName,
+                          CourseName = course.CourseName,
+                          ExamDate = exam.Date.ToDateTime(TimeOnly.MinValue),
+                          Score = (double)result.Score,
+                          PassStatus = result.PassStatus ? "Đạt" : "Không đạt"
+                      }).ToList();
 
-            LoadScores();
-        }
-
-        private void LoadScores()
-        {
-            var scores = (from result in _context.Results
-                          join exam in _context.Exams on result.ExamId equals exam.ExamId
-                          join course in _context.Courses on exam.CourseId equals course.CourseId
-                          join user in _context.Users on result.UserId equals user.UserId
-                          select new StudentScoreDTO
-                          {
-                              StudentName = user.FullName,
-                              CourseName = course.CourseName,
-                              ExamDate = exam.Date.ToDateTime(TimeOnly.MinValue),
-                              Score = (double)result.Score,
-                              PassStatus = result.PassStatus ? "Đạt" : "Không đạt"
-                          }).ToList();
-
-            ScoresDataGrid.ItemsSource = scores;
-        }
+        dgScores.ItemsSource = scores;
+    }
     }
 }
