@@ -201,5 +201,15 @@ namespace PRN_SafeDrive_Aplication.BiLL
         {
             MainContent.Content = new StudentCertificates();
         }
+
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new ViewAllScores();
+        }
+
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new CertificateListView();
+        }
     }
 }

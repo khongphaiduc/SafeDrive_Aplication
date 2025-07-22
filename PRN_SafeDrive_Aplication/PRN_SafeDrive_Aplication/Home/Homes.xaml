@@ -89,8 +89,8 @@
             <Button Content="👤 Hồ sơ cá nhân" Style="{StaticResource ModernButton}" Background="Transparent" Foreground="White" Click="Button_Click_1"/>
             <Button Content="📚 Khóa học hiện có" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="DisplayCourseOfPolice"/>
             <Button Content="📝 Tổ Chức Kỳ Thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_3"/>
-            <Button Content="📝 Điểm Thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
-            <Button Content="📊 Danh Sách Chứng Chỉ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="📝 Điểm Thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_8"/>
+            <Button Content="📊 Danh Sách Chứng Chỉ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_9"/>
         </StackPanel>
 
         <!-- Nội dung chính -->
