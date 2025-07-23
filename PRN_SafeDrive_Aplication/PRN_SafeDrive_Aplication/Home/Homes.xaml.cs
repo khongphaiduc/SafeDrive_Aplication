@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -72,6 +72,8 @@ namespace PRN_SafeDrive_Aplication.BiLL
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             MainContent.Content = new StudentWindow();
+
+
         }
 
 
@@ -85,8 +87,7 @@ namespace PRN_SafeDrive_Aplication.BiLL
         // hiện thị tất cả khóa học của teacher 
         private void DisplayCourseOfTeacher(object sender, RoutedEventArgs e)
         {
-            //MainContent.Content = new DisplayListCourseOfTeacher();
-            MainContent.Content = new ManageCoursesWindow();
+            MainContent.Content = new DisplayListCourseOfTeacher();
         }
 
 
@@ -135,11 +136,7 @@ namespace PRN_SafeDrive_Aplication.BiLL
                 courseListControl.CourseSelected += CourseListControl_CourseSelected;
                 MainContent.Content = courseListControl;
             }
-            else
-            {
-                ManageCoursesWindow m = new();
-               // m.ShowDialog();
-            }
+            
         }
 
         private void CourseListControl_CourseSelected(object? sender, int courseId)
@@ -187,11 +184,7 @@ namespace PRN_SafeDrive_Aplication.BiLL
                 courseListControl.CourseSelected += CourseListControl_CourseSelected2;
                 MainContent.Content = courseListControl;
             }
-            else
-            {
-                ManageCoursesWindow m = new();
-               // m.ShowDialog();
-            }
+           
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
@@ -220,14 +213,7 @@ namespace PRN_SafeDrive_Aplication.BiLL
             loginWindow.ShowDialog();
         }
 
-        private void Button_Click_8(object sender, RoutedEventArgs e)
-        {
-            MainContent.Content = new ViewAllScores();
-        }
 
-        private void Button_Click_9(object sender, RoutedEventArgs e)
-        {
-            MainContent.Content = new CertificateListView();
-        }
+
     }
 }
