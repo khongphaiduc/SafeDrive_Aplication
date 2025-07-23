@@ -195,7 +195,11 @@ namespace PRN_SafeDrive_Aplication.BiLL
             MainContent.Content = new StudentCertificates();
         }
 
-  
+        private void Button_Click_ThongKePass(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new ThongKePassUserControl();
+        }
+
 
         private void LogOutMethod(object sender, RoutedEventArgs e)
         {
