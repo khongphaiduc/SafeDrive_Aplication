@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="PRN_SafeDrive_Aplication.Police.ThongKePassUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PRN_SafeDrive_Aplication.Police"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="600">
+    <UserControl.Resources>
+        <Style x:Key="CardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Gray" BlurRadius="10" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="White">
+        <Border Style="{StaticResource CardStyle}" Margin="30">
+            <StackPanel>
+                <TextBlock Text="Thống kê tỉ lệ pass của các khóa học" FontSize="20" FontWeight="Bold" Margin="0,0,0,20"/>
+                <DataGrid x:Name="PassRateDataGrid" AutoGenerateColumns="False" Height="300" Margin="0,0,0,10">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Tên Khóa Học" Binding="{Binding CourseName}" Width="*"/>
+                        <DataGridTextColumn Header="Số lượng thi" Binding="{Binding Total}" Width="100"/>
+                        <DataGridTextColumn Header="Số lượng pass" Binding="{Binding PassCount}" Width="100"/>
+                        <DataGridTextColumn Header="Tỉ lệ pass (%)" Binding="{Binding PassRate}" Width="100"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

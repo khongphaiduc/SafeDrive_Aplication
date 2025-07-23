@@ -142,6 +142,11 @@ namespace PRN_SafeDrive_Aplication.BiLL
                 courseListControl.CourseSelected += CourseListControl_CourseSelected;
                 MainContent.Content = courseListControl;
             }
+            else
+            {
+                ManageCoursesWindow m = new();
+               // m.ShowDialog();
+            }
         }
 
         private void CourseListControl_CourseSelected(object? sender, int courseId)
@@ -189,6 +194,11 @@ namespace PRN_SafeDrive_Aplication.BiLL
                 courseListControl.CourseSelected += CourseListControl_CourseSelected2;
                 MainContent.Content = courseListControl;
             }
+            else
+            {
+                ManageCoursesWindow m = new();
+               // m.ShowDialog();
+            }
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
@@ -201,7 +211,11 @@ namespace PRN_SafeDrive_Aplication.BiLL
             MainContent.Content = new StudentCertificates();
         }
 
-  
+        private void Button_Click_ThongKePass(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new ThongKePassUserControl();
+        }
+
 
         private void LogOutMethod(object sender, RoutedEventArgs e)
         {
@@ -249,3 +263,4 @@ namespace PRN_SafeDrive_Aplication.BiLL
         }
     }
 }
+
