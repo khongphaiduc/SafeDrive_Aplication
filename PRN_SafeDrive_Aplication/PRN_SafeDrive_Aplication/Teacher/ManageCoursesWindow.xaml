@@ -1,8 +1,7 @@
-﻿<Window x:Class="PRN_SafeDrive_Aplication.Teacher.ManageCoursesWindow"
+﻿<UserControl x:Class="PRN_SafeDrive_Aplication.Teacher.ManageCoursesWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Quản lý khóa học" Height="750" Width="1350"
-        WindowStartupLocation="CenterScreen"
+
         Background="#F3F6FA">
     <Grid>
         <!-- Header -->
@@ -141,4 +140,4 @@
             Click="BtnDeleteCourse_Click" FontWeight="Bold" Width="148" HorizontalAlignment="Left" RenderTransformOrigin="1,3.58" Grid.Row="1"  />
         </Grid>
     </Grid>
-</Window>
+</UserControl>

@@ -17,8 +17,27 @@ namespace PRN_SafeDrive_Aplication.Student
 
             // Lấy email từ SessionUser
             string email = SessionUser.Email;
+            string role = SessionUser.Role;
 
             currentUser = _context.Users.FirstOrDefault(u => u.Email == email);
+
+            if (role == "Teacher" || role == "TrafficPolice")
+            {
+                if (role == "Teacher") 
+                    InformationLabelMode.Content = "Chỉnh sửa thông tin giáo viên";
+                if (role == "TrafficPolice")
+                    InformationLabelMode.Content = "Chỉnh sửa thông tin cảnh sát giao thông";
+                tblClass.Visibility = Visibility.Collapsed;
+                tblClass2.Visibility = Visibility.Collapsed;
+                txtLop.Visibility = Visibility.Collapsed;
+                txtTruong.Visibility = Visibility.Collapsed;
+                tblLop.Visibility = Visibility.Collapsed;
+                tblTruong.Visibility = Visibility.Collapsed;
+                tblSchool.Visibility = Visibility.Collapsed;
+            } else
+            {
+                InformationLabelMode.Content = "Chỉnh sửa thông tin học sinh";
+            } 
 
             if (currentUser != null)
             {
@@ -38,6 +57,7 @@ namespace PRN_SafeDrive_Aplication.Student
                 txtLop.Text = currentUser.Class ?? "";
                 txtTruong.Text = currentUser.School ?? "";
                 txtSoDienThoai.Text = currentUser.Phone ?? "";
+
             }
             else
             {
