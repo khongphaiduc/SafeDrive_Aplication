@@ -1,0 +1,57 @@
+﻿<UserControl x:Class = "PRN_SafeDrive_Aplication.Admin.ClassStatisticsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PRN_SafeDrive_Aplication.Admin"
+               mc:Ignorable="d"
+              Background="#F6F8FB" d:DesignHeight="461.983" d:DesignWidth="713.6">
+    <Grid Margin="32">
+        <StackPanel>
+            <!-- Tiêu đề -->
+            <TextBlock Text="Thống kê lớp học"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Foreground="#304FFE"
+                       Margin="0 0 0 20"/>
+
+            <!-- Thống kê tổng quan -->
+            <UniformGrid Columns="4" Margin="0 0 0 20">
+                <StackPanel>
+                    <TextBlock Text="Tổng số học viên" FontWeight="SemiBold"/>
+                    <TextBlock x:Name="lblTotalStudents" FontSize="16"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Điểm trung bình" FontWeight="SemiBold"/>
+                    <TextBlock x:Name="lblAverageScore" FontSize="16"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Số lượng đậu" FontWeight="SemiBold"/>
+                    <TextBlock x:Name="lblPassCount" FontSize="16"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Số lượng rớt" FontWeight="SemiBold"/>
+                    <TextBlock x:Name="lblFailCount" FontSize="16"/>
+                </StackPanel>
+            </UniformGrid>
+
+            <!-- Bảng chi tiết -->
+            <DataGrid x:Name="dgResults"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      HeadersVisibility="Column"
+                      RowHeight="32"
+                      ColumnHeaderHeight="40"
+                      FontSize="14"
+                      AlternatingRowBackground="#F0F4FF"
+                      GridLinesVisibility="None">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Họ tên" Binding="{Binding FullName}" Width="*"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
+                    <DataGridTextColumn Header="Điểm" Binding="{Binding Score}" Width="100"/>
+                    <DataGridTextColumn Header="Trạng thái" Binding="{Binding Status}" Width="100"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</UserControl>

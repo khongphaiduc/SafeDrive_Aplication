@@ -1,4 +1,5 @@
-﻿using PRN_SafeDrive_Aplication.Models;
+﻿using PRN_SafeDrive_Aplication.Admin;
+using PRN_SafeDrive_Aplication.Models;
 using PRN_SafeDrive_Aplication.Test;
 using System.Text;
 using System.Windows;
@@ -25,7 +26,7 @@ namespace PRN_SafeDrive_Aplication
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-          Prn1Context prn1Context = new Prn1Context();
+            Prn1Context prn1Context = new Prn1Context();
 
             if (prn1Context.Users.Count() != 0)
             {

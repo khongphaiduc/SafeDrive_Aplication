@@ -55,7 +55,6 @@ namespace PRN_SafeDrive_Aplication.Log
                 SessionUser.Email = account; // Lưu email vào SessionUser
                 SessionUser.Role = GetRoleByEmail(account); //lưu role vào session
                 Homes homes = new Homes();
-
                 homes.ShowDialog();
                 this.Close();
             }

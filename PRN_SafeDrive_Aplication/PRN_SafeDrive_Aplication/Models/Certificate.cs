@@ -9,6 +9,8 @@ public partial class Certificate
 
     public int UserId { get; set; }
 
+    public int CourseId { get; set; }
+
     public DateOnly? IssuedDate { get; set; }
 
     public DateOnly? ExpirationDate { get; set; }
@@ -17,4 +19,6 @@ public partial class Certificate
 
     public int CertificateCodeID { get; set; }
     public virtual User User { get; set; } = null!;
+
+    public virtual Course Course { get; set; } = null!;
 }
