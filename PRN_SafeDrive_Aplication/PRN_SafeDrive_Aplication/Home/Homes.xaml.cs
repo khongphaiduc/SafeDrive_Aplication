@@ -33,19 +33,20 @@ namespace PRN_SafeDrive_Aplication.BiLL
             UIStudent.Visibility = Visibility.Collapsed;
             UITeachers.Visibility = Visibility.Collapsed;
             UIPolice.Visibility = Visibility.Collapsed;
+            UIAdmin.Visibility = Visibility.Collapsed;
 
 
             string roleTest = SessionUser.Role;
             string emailTest = SessionUser.Email;
 
-            //Console.WriteLine($"Email của bạn là : {emailTest} và  role của bạn là {roleTest}");
+            Console.WriteLine($"Email của bạn là : {emailTest} và  role của bạn là {roleTest}");
 
 
             if (SessionUser.Role.Equals("Student"))
             {
                 UIStudent.Visibility = Visibility.Visible;       // Hiển thị giao diện sinh viên
             }
-            else if (SessionUser.Role == ("Teacher"))
+            else if (SessionUser.Role == "Teacher" && SessionUser.Email != "admin@gmail.com")
             {
                 UITeachers.Visibility = Visibility.Visible;      // Hiển thị giao diện giáo viên
             }
@@ -53,11 +54,13 @@ namespace PRN_SafeDrive_Aplication.BiLL
             {
                 UIPolice.Visibility = Visibility.Visible;       // Hiển thị giao diện cảnh sát
             } 
-            else if (SessionUser.Email == "admin@gmail.com")
+            else if (SessionUser.Email.Equals("admin@gmail.com"))
             {
                 UIAdmin.Visibility = Visibility.Visible;
             }
         }
+
+
 
 
 
@@ -90,7 +93,7 @@ namespace PRN_SafeDrive_Aplication.BiLL
         private void DisplayCourseOfTeacher(object sender, RoutedEventArgs e)
         {
             //MainContent.Content = new DisplayListCourseOfTeacher();
-            MainContent.Content = new ManageCoursesWindow();
+            MainContent.Content = new Teacher.ManageCoursesWindow();
         }
 
 
@@ -202,12 +205,21 @@ namespace PRN_SafeDrive_Aplication.BiLL
 
         private void LogOutMethod(object sender, RoutedEventArgs e)
         {
-            SessionUser.Email = string.Empty;
-            SessionUser.Role = string.Empty;
-            SessionUser.UserId = 0;
-            Login loginWindow = new Login();
-            this.Close(); // Đóng cửa sổ hiện tại
-            loginWindow.ShowDialog();
+            var result = MessageBox.Show("Bạn có muốn đăng xuất?", "!!!", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                 SessionUser.Email = string.Empty;
+                SessionUser.Role = string.Empty;
+                SessionUser.UserId = 0;
+                Login loginWindow = new Login();
+                this.Close(); // Đóng cửa sổ hiện tại
+                loginWindow.ShowDialog();
+            }
+            else
+            {
+                // Không làm gì nếu chọn No
+            }         
         }
 
         private void Button_Click_8(object sender, RoutedEventArgs e)
@@ -229,6 +241,11 @@ namespace PRN_SafeDrive_Aplication.BiLL
         {
             MainContent.Content = new OverviewDashboard();
 
+        }
+
+        private void ManageCourseOfAdmin(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new Admin.ManageCoursesWindow();
         }
     }
 }

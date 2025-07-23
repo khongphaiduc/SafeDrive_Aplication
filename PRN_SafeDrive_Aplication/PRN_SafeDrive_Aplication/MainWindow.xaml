@@ -6,9 +6,8 @@
         xmlns:local="clr-namespace:PRN_SafeDrive_Aplication"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-
-    <!-- <Button Content="Click Here to TestConnnect SQL of You" FontSize="20" HorizontalAlignment="Center" Margin="0,184,0,0" VerticalAlignment="Top" Width="414" Height="98" Click="Button_Click"/>-->
+    
     <Grid>
-        <ContentControl x:Name="MainContent"/>
+        <Button Content="Click Here to TestConnnect SQL of You" FontSize="20" HorizontalAlignment="Center" Margin="0,184,0,0" VerticalAlignment="Top" Width="414" Height="98" Click="Button_Click"/>
     </Grid>
 </Window>

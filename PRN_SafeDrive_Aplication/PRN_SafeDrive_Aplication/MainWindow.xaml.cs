@@ -22,31 +22,25 @@ namespace PRN_SafeDrive_Aplication
         public MainWindow()
         {
             InitializeComponent();
-            ShowContent(new OverviewDashboard());
         }
 
-        public void ShowContent(UserControl control)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = control;
+            Prn1Context prn1Context = new Prn1Context();
+
+            if (prn1Context.Users.Count() != 0)
+            {
+                int a = 0;
+                while (a < 50)
+                {
+                    TestProject s = new TestProject();
+                    a++;
+                    s.Show();
+                }
+
+            }
+
+
         }
-
-        //private void Button_Click(object sender, RoutedEventArgs e)
-        //{
-        //  Prn1Context prn1Context = new Prn1Context();
-
-        //    if (prn1Context.Users.Count() != 0)
-        //    {
-        //        int a = 0;
-        //        while (a < 50)
-        //        {
-        //            TestProject s = new TestProject();
-        //            a++;
-        //            s.Show();
-        //        }
-
-        //    }
-
-
-        //}
     }
 }

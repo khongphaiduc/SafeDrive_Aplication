@@ -33,12 +33,12 @@ namespace PRN_SafeDrive_Aplication.Admin
         private void LoadDashboard()
         {
             var totalUsers = _context.Users.Count();
-            var adminCount = _context.Users.Count(u => u.Role == "Admin");
+            var policeCount = _context.Users.Count(u => u.Role == "TrafficPolice");
             var teacherCount = _context.Users.Count(u => u.Role == "Teacher");
             var studentCount = _context.Users.Count(u => u.Role == "Student");
 
             txtTotalUsers.Text = totalUsers.ToString();
-            txtUserRoles.Text = $"Admin: {adminCount} | GV: {teacherCount} | HV: {studentCount}";
+            txtUserRoles.Text = $"TrafficPolice: {policeCount} | Teacher: {teacherCount} | Student: {studentCount}";
 
             var today = DateOnly.FromDateTime(DateTime.Now);
             var activeCourses = _context.Courses.Count(c => c.EndDate > today);

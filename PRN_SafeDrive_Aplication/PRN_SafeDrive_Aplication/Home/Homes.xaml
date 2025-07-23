@@ -57,7 +57,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Sidebar  của thằng student  -->
+        <!-- Sidebar của thằng student  -->
         <StackPanel x:Name="UIStudent" Background="#2c3e50" Orientation="Vertical" Grid.Column="0">
             <TextBlock Text="🚗 SafeDrive" FontSize="22" Foreground="White" FontWeight="Bold" Margin="20"/>
             <Button Content="🏠 Trang chủ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="HomeStudent"/>
@@ -67,7 +67,6 @@
             <Button Content="📝 Xem lịch thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_6"/>
             <Button Content="📊 Xem chứng chỉ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_7"/>
             <Button Content="logOut" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="LogOutMethod"/>
-            <Button Content="⚙️ Cài đặt" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
         </StackPanel>
 
         <!-- Sidebar  của thằng Teacher  -->
@@ -77,9 +76,7 @@
             <Button Content="👤 Hồ sơ cá nhân" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_1"/>
             <Button Content="📚 Quản Lý Khóa học" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="DisplayCourseOfTeacher"/>
             <Button Content="📝 Tạo Khóa Học Mới" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_taokhoahoc"/>
-            <Button Content="📝 Kỳ thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
-            <Button Content="📊 Thống kê lớp học" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
-            <Button Content="⚙️ Cài đặt" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="logOut" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="LogOutMethod"/>
         </StackPanel>
 
         <!-- Sidebar của Công An  -->
@@ -91,6 +88,7 @@
             <Button Content="📝 Tổ Chức Kỳ Thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_3"/>
             <Button Content="📝 Điểm Thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
             <Button Content="📊 Danh Sách Chứng Chỉ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="logOut" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="LogOutMethod"/>
         </StackPanel>
 
         <!-- Sidebar của admin  -->
@@ -100,8 +98,8 @@
             <Button Content="👤 Hồ sơ cá nhân" Style="{StaticResource ModernButton}" Background="Transparent" Foreground="White" Click="Button_Click_1"/>
             <Button Content="📚 Thống kê lớp học" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="btnClassStatistics"/>
             <Button Content="📝 Thống kê hệ thống" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="btnSystemStatistics"/>
-            <Button Content="📝 Điểm Thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
-            <Button Content="📊 Danh Sách Chứng Chỉ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="📚 Quản Lý Khóa học" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="ManageCourseOfAdmin"/>
+            <Button Content="logOut" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="LogOutMethod"/>
         </StackPanel>
 
         <!-- Nội dung chính -->
