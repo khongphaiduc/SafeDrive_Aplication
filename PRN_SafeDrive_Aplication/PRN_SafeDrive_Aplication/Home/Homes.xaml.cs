@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PRN_SafeDrive_Aplication.Admin;
 using PRN_SafeDrive_Aplication.Home;
 using PRN_SafeDrive_Aplication.Models;
 using PRN_SafeDrive_Aplication.Police;
@@ -36,7 +37,7 @@ namespace PRN_SafeDrive_Aplication.BiLL
             string roleTest = SessionUser.Role;
             string emailTest = SessionUser.Email;
 
-            Console.WriteLine($"Email của bạn là : {emailTest} và  role của bạn là {roleTest}");
+            //Console.WriteLine($"Email của bạn là : {emailTest} và  role của bạn là {roleTest}");
 
 
             if (SessionUser.Role.Equals("Student"))
@@ -45,12 +46,15 @@ namespace PRN_SafeDrive_Aplication.BiLL
             }
             else if (SessionUser.Role == ("Teacher"))
             {
-                Console.WriteLine(SessionUser.Role);
                 UITeachers.Visibility = Visibility.Visible;      // Hiển thị giao diện giáo viên
             }
-            else
+            else if (SessionUser.Role == ("TrafficPolice"))
             {
                 UIPolice.Visibility = Visibility.Visible;       // Hiển thị giao diện cảnh sát
+            } 
+            else if (SessionUser.Email == "admin@gmail.com")
+            {
+                UIAdmin.Visibility = Visibility.Visible;
             }
         }
 
@@ -134,11 +138,6 @@ namespace PRN_SafeDrive_Aplication.BiLL
                 courseListControl.CourseSelected += CourseListControl_CourseSelected;
                 MainContent.Content = courseListControl;
             }
-            else
-            {
-                ManageCoursesWindow m = new();
-               // m.ShowDialog();
-            }
         }
 
         private void CourseListControl_CourseSelected(object? sender, int courseId)
@@ -186,11 +185,6 @@ namespace PRN_SafeDrive_Aplication.BiLL
                 courseListControl.CourseSelected += CourseListControl_CourseSelected2;
                 MainContent.Content = courseListControl;
             }
-            else
-            {
-                ManageCoursesWindow m = new();
-               // m.ShowDialog();
-            }
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
@@ -211,6 +205,17 @@ namespace PRN_SafeDrive_Aplication.BiLL
         private void Button_Click_9(object sender, RoutedEventArgs e)
         {
             MainContent.Content = new CertificateListView();
+        }
+
+        private void btnClassStatistics(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new ClassStatisticsView();
+        }
+
+        private void btnSystemStatistics(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new OverviewDashboard();
+
         }
     }
 }

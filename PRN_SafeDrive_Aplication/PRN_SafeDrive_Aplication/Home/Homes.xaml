@@ -82,13 +82,24 @@
             <Button Content="⚙️ Cài đặt" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
         </StackPanel>
 
-        <!-- Sidebar  của Công An  -->
+        <!-- Sidebar của Công An  -->
         <StackPanel x:Name="UIPolice" Background="#2c3e50" Orientation="Vertical" Grid.Column="0" Margin="-10,0,10,0">
             <TextBlock Text="🚗 SafeDrive" FontSize="22" Foreground="White" FontWeight="Bold" Margin="20"/>
             <Button Content="🏠 Trang chủ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"  Click="HomePolice" />
             <Button Content="👤 Hồ sơ cá nhân" Style="{StaticResource ModernButton}" Background="Transparent" Foreground="White" Click="Button_Click_1"/>
             <Button Content="📚 Khóa học hiện có" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="DisplayCourseOfPolice"/>
             <Button Content="📝 Tổ Chức Kỳ Thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="Button_Click_3"/>
+            <Button Content="📝 Điểm Thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+            <Button Content="📊 Danh Sách Chứng Chỉ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
+        </StackPanel>
+
+        <!-- Sidebar của admin  -->
+        <StackPanel x:Name="UIAdmin" Background="#2c3e50" Orientation="Vertical" Grid.Column="0" Margin="-10,0,10,0">
+            <TextBlock Text="🚗 SafeDrive" FontSize="22" Foreground="White" FontWeight="Bold" Margin="20"/>
+            <Button Content="🏠 Trang chủ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"  />
+            <Button Content="👤 Hồ sơ cá nhân" Style="{StaticResource ModernButton}" Background="Transparent" Foreground="White" Click="Button_Click_1"/>
+            <Button Content="📚 Thống kê lớp học" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="btnClassStatistics"/>
+            <Button Content="📝 Thống kê hệ thống" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="btnSystemStatistics"/>
             <Button Content="📝 Điểm Thi" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
             <Button Content="📊 Danh Sách Chứng Chỉ" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White"/>
         </StackPanel>
