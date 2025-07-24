@@ -99,6 +99,7 @@
             <Button Content="📚 Thống kê lớp học" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="btnClassStatistics"/>
             <Button Content="📝 Thống kê hệ thống" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="btnSystemStatistics"/>
             <Button Content="📚 Quản Lý Khóa học" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="ManageCourseOfAdmin"/>
+            <Button Content="📊 Quản lí người dùng" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="btnUserManage"/>
             <Button Content="logOut" Style="{StaticResource ModernButton}" Margin="10,5" Background="Transparent" Foreground="White" Click="LogOutMethod"/>
         </StackPanel>
 
