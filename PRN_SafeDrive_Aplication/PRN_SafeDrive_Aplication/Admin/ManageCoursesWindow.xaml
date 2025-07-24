@@ -25,7 +25,7 @@
             <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"
                     CornerRadius="18" Background="White"
                     BorderBrush="#CBD5E1" BorderThickness="1"
-                    Margin="28,24,16,119" Padding="22">
+                    Margin="28,24,16,28" Padding="22">
                 <StackPanel>
                     <TextBlock Text="📚 Danh sách khóa học" FontSize="20" FontWeight="Bold"
                                Foreground="#2563EB" Margin="0,0,0,18"/>
@@ -63,6 +63,7 @@
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding CourseID}" Width="55"/>
                             <DataGridTextColumn Header="Tên khóa học" Binding="{Binding CourseName}" Width="180"/>
+                            <DataGridTextColumn Header="Giáo viên" Binding="{Binding TeacherName}" />
 
                         </DataGrid.Columns>
                     </DataGrid>
@@ -137,8 +138,7 @@
                     </StackPanel>
                 </StackPanel>
             </Border>
-            <Button  Content="Xóa khóa học" Margin="343,237,0,28" Background="#DC2626" Foreground="White"
-            Click="BtnDeleteCourse_Click" FontWeight="Bold" Width="148" HorizontalAlignment="Left" RenderTransformOrigin="1,3.58" Grid.Row="1"  />
+          
         </Grid>
     </Grid>
 </UserControl>

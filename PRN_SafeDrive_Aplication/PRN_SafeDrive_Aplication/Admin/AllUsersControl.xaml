@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="PRN_SafeDrive_Aplication.Admin.AllUsersControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PRN_SafeDrive_Aplication.Admin"
+            mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="800">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Search bar -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center">
+            <TextBox x:Name="txtSearch"
+                     Width="300"
+                     Height="30"
+                     Margin="0,0,10,0"
+                     FontSize="14"
+                     VerticalContentAlignment="Center"/>
+            <Button Content="Tìm kiếm"
+                    Width="100"
+                    Height="30"
+                    Background="#007ACC"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    Click="BtnSearch_Click" />
+        </StackPanel>
+
+        <!-- Spacer -->
+        <Border Grid.Row="1" Height="10"/>
+
+        <!-- DataGrid -->
+        <DataGrid x:Name="dgUsers"
+                  Grid.Row="2"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  IsReadOnly="True"
+                  HeadersVisibility="Column"
+                  FontSize="14"
+                  RowHeight="30"
+                  ColumnHeaderHeight="35"
+                  Margin="0,10,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Họ tên" Binding="{Binding FullName}" Width="*"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
+                <DataGridTextColumn Header="Vai trò" Binding="{Binding Role}" Width="100"/>
+                <DataGridTextColumn Header="Lớp" Binding="{Binding Class}" Width="100"/>
+                <DataGridTextColumn Header="Trường" Binding="{Binding School}" Width="150"/>
+                <DataGridTextColumn Header="Số điện thoại" Binding="{Binding Phone}" Width="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
